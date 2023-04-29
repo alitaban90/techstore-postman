@@ -1,0 +1,4946 @@
+{
+	"info": {
+		"_postman_id": "702fe1a6-7b42-456f-b5f2-565778896f90",
+		"name": "Tech store Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "api/authenticate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.globals.set(\"tech_store_token\", jsonData.id_token);"
+								],
+								"type": "text/javascript",
+								"id": "8fc3e153-1c15-42bd-9525-e1c8ec5a3f7b"
+							}
+						}
+					],
+					"_postman_id": "694480e8-55b4-44fb-82f9-557ec91aa743",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJPUEVSQVRPUixBRE1JTixNQU5BR0VSLFBBUkRBS0hUWUFSLExPR0dFRF9JTixST0xFX0FOT05ZTU9VUyIsImlkIjoiNDA1MSJ9.aDxgWQ9benure7GoW-JHrKKSwUhSA76tzdetpq1Fwa3vFh-HHmWw45YLX1OBL0fMb93LRy-yRo4qf4SWMd6oWw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"rememberMe\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/authenticate"
+					},
+					"response": []
+				},
+				{
+					"name": "api/account",
+					"_postman_id": "a6f200ff-2aa5-428d-9bbf-81ebbbf8f4d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/account"
+					},
+					"response": []
+				},
+				{
+					"name": "api/account",
+					"_postman_id": "94ed2332-bea5-463f-99ab-62ed8fce2eca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"yxQ1uZGBroH7ZGEgF2cpSg،3D،3D\",\r\n    \"username\": \"admin\",\r\n    \"firstName\": \"hamed\",\r\n    \"lastName\": \"farzanehfar\",\r\n    \"email\": \"developer@tosantechno.com\",\r\n    \"mobile\": \"09122469704\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/account"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "854577a8-a7d6-4d9c-b89d-ddedc291b807"
+		},
+		{
+			"name": "command",
+			"item": [
+				{
+					"name": "/api/market/command/message",
+					"_postman_id": "0d7a27ae-7816-453d-b69d-d5606349fe58",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"message\": \"new message!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/message"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/locale_change",
+					"_postman_id": "8d04e01c-71bb-422b-9db6-ea3a5ad69fec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"localeCode\": \"fa_IR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/locale_change"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/screen_brightness_change",
+					"_postman_id": "b62c097c-748a-48cf-977d-c7252fcfbdf7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"amount\": \"50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/screen_brightness_change"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/volume_change",
+					"_postman_id": "898c7743-b51f-44a9-86ad-0fdea2f710cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"amount\": \"50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/volume_change"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/reboot",
+					"_postman_id": "8d45de3f-2906-488a-ab52-39bdd82cb200",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/reboot"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/install_firmware",
+					"_postman_id": "2c67617b-0090-45c8-bf7b-ba315a3de1de",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"5435\",\r\n    \"firmwareId\": \"wzvNpXfb5QRzU3AfED2TCg،3D،3D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/install_firmware"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/send_device",
+					"_postman_id": "ae763f86-ccde-4b33-85e5-a80edc2940cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/send_device_dump"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/enable_request_response_log",
+					"_postman_id": "601da7a6-bc58-459a-8c7c-9268a044d593",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/enable_request_response_log"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/resend_all_data",
+					"_postman_id": "57bf9f79-d929-4329-a13e-f330a4ed8927",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/resend_all_data"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/fail_all_commands",
+					"_postman_id": "ce58e01c-a990-407c-bca6-506b833cf891",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/fail_all_commands"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/send_device_logs",
+					"_postman_id": "a754bd33-1818-4895-866c-4ad3b6aaf3b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/send_device_logs"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/bluetooth_change_status",
+					"_postman_id": "2cce8b52-1744-4055-adcb-f803822634ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"status\": \"20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/bluetooth_change_status"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/wifi_change_status",
+					"_postman_id": "85f03986-e140-4267-b0aa-a8594c100f82",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"status\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/wifi_change_status"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/gps_change_status",
+					"_postman_id": "bbd8d81b-1bb8-4d9d-b9fd-c77ab0412836",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"status\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/gps_change_status"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/printer_change_status",
+					"_postman_id": "cba3de01-41a7-4475-996b-3ffe9903049d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"status\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/printer_change_status"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/app_management",
+					"_postman_id": "fcf5be9a-dcf8-4e3f-8d7d-f7bfb50be9b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"managementType\": \"1\",\r\n    \"appId\": \"yxQ1uZGBroH7ZGEgF2cpSg،3D،3D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/app_management"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/command/list",
+					"_postman_id": "7a9a99cc-625c-48ab-9f2e-aaca53901349",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/command/cancel_command/{id}",
+					"_postman_id": "eae6fe5a-65b1-4e5f-972c-08780bb985df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/cancel_command/Kvrb8t6،2BH4Apj3eI94iocg،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "86f3686d-381f-4a98-a39e-3a7e7cd5a4de"
+		},
+		{
+			"name": "bulk_install",
+			"item": [
+				{
+					"name": "/api/market/command/bulk_install_app",
+					"_postman_id": "96df7dac-d887-4657-b28d-0073924f1631",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appId\": \"RKGvkx8zT3rQ4،2FFzqhzeaA،3D،3D\",\r\n    \"deviceIds\":[\"\",\"\",\"\"],\r\n    \"groupIds\":[\"\",\"\",\"\"],\r\n    \"merchantIds\":[\"\",\"\",\"\"],\r\n    \"manufactureModelIds\":[\"\",\"\",\"\"],\r\n    \"managementType\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/bulk_install_app"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/command/bulk_install_firmware",
+					"_postman_id": "00516a75-f476-4d09-9182-a028e0c42b22",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firmwareId\": \"wzvNpXfb5QRzU3AfED2TCg،3D،3D\",\r\n    \"deviceIds\":[\"ZTBta9OInovGiztgpcQ2Yw،3D،3D\",\"soKkL6cen749asBxG،2F5njQ،3D،3D\",\"\"],\r\n    \"groupIds\":[\"\",\"\",\"\"],\r\n    \"merchantIds\":[\"\",\"\",\"\"],\r\n    \"manufactureModelUpdate\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/command/bulk_install_firmware"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "5d44d61b-7fbf-42e5-9ae2-ce24ae9f229d"
+		},
+		{
+			"name": "device",
+			"item": [
+				{
+					"name": "api/market/device/download_logs",
+					"_postman_id": "d6125f2d-9889-46a8-a994-edeb2171a67d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"message\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tech_store_url}}/api/market/device/download_logs?serialNo=1170002482",
+							"host": [
+								"{{tech_store_url}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"device",
+								"download_logs"
+							],
+							"query": [
+								{
+									"key": "serialNo",
+									"value": "1170002482"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device",
+					"_postman_id": "39ab374d-5bdd-4d0b-89b7-29f3f0315731",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1234\",\r\n    \"message\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{tech_store_url}}/api/market/device?serialNo=1234",
+							"host": [
+								"{{tech_store_url}}"
+							],
+							"path": [
+								"api",
+								"market",
+								"device"
+							],
+							"query": [
+								{
+									"key": "serialNo",
+									"value": "1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device/device_data/{id}",
+					"_postman_id": "66864512-0709-47e4-801d-348871ddbbee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"message\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/device_data/vRC6،2Blo5vhmx8dlA،2Bhm6oQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device/list",
+					"_postman_id": "0c6785d8-2153-4ea0-bf60-2b09511bee6e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device/excel",
+					"_postman_id": "6bc01d3d-6c24-47e4-aab6-27e7badaee3d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"condition\": {\r\n        \"conditionType\": \"AND\",\r\n        \"conditions\": []\r\n    },\r\n    \"isEmpty\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/excel"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device",
+					"_postman_id": "0f50426d-b4b1-4b2a-aead-6118f3885e7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"merchantId\": \"Ul4FZq9LHDqbuNbVaEHRyg،3D،3D\",\r\n    \"name\": \"A930456456 Pro\",\r\n    \"email\": \"a@b.com\",\r\n    \"serialNo\": \"12345645\",\r\n    \"status\": 10,\r\n    \"authenticationMethod\": 1,\r\n    \"syncInterval\": 2      ,\r\n      \"manufactureModel\": {\r\n        \"id\":\"Ul4FZq9LHDqbuNbVaEHRyg،3D،3D\",\r\n        \"code\":\"P3\",\r\n        \"manufactureId\":\"RKGvkx8zT3rQ4،2FFzqhzeaA،3D،3D\",\r\n        \"name\":\"P3\",\r\n        \"os\" : \"1\",\r\n        \"platform\" : \"1\",\r\n        \"status\":\"10\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device",
+					"_postman_id": "f7fc6c62-8c04-48cc-8774-82ed23855646",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"vRC6،2Blo5vhmx8dlA،2Bhm6oQ،3D،3D\",\r\n    \"merchantId\": \"Ul4FZq9LHDqbuNbVaEHRyg،3D،3D\",\r\n    \"name\": \"testmina\",\r\n    \"email\": \"a@b.com\",\r\n    \"serialNo\": \"1234\",\r\n    \"status\": 10,\r\n    \"authenticationMethod\": 1,\r\n    \"manufactureModel\": {\r\n        \"id\":\"Ul4FZq9LHDqbuNbVaEHRyg،3D،3D\",\r\n        \"code\":\"P3\",\r\n        \"manufactureId\":\"RKGvkx8zT3rQ4،2FFzqhzeaA،3D،3D\",\r\n        \"name\":\"P3\",\r\n        \"os\" : \"1\",\r\n        \"platform\" : \"1\",\r\n        \"status\":\"10\"\r\n    },\r\n    \"syncInterval\": 2,\r\n    \"status\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/device/{id}",
+					"_postman_id": "66ce2bd2-a9dc-471d-b1f4-26db1dfa0958",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/device/qAZ7HRaef،2F3CwMpTj8wiPQ،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "362aa033-06b3-4898-81ed-87518f6f516d"
+		},
+		{
+			"name": "operator market users",
+			"item": [
+				{
+					"name": "api/operator/without_market_users/{id}",
+					"_postman_id": "17a58ecc-ed52-4c20-b556-e084a1bd3f50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/without_market_users/j9LToA9،2FzPnVDRpKBLiWmA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market_roles_list",
+					"_postman_id": "2335ec18-ea1b-4b1e-a81a-92bd66afeee8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/market_roles_list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/resller_tree/{id}",
+					"_postman_id": "27ac7541-abf9-403b-9533-c2b95435e7ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/resller_tree/Rs0Jr33s2F3Fdh6MlodxaA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/without_market_users/list",
+					"_postman_id": "4eea3f48-d0ff-409a-8bb8-6a145e48617c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/without_market_users/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/without_market_users",
+					"_postman_id": "147d75dd-dd4b-4326-b060-2ba67ad660bb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"username\": \"test_test\",\r\n    \"firstName\": \"hadiii\",\r\n    \"lastName\": \"test\",\r\n    \"email\": \"gh@test.com\",\r\n    \"mobile\": \"09916593472\",\r\n    \"activated\": true,\r\n    \"createdDate\": \"2023-01-07T09:05:29\",\r\n    \"marketId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"resellerId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"roles\": [\r\n        {\r\n            \"name\": \"MARKET_DEVELOPER\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/without_market_users"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/without_market_users",
+					"_postman_id": "5c0ce670-cdfb-4735-901f-2ab1861539bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test_test\",\r\n    \"firstName\": \"hadiii\",\r\n    \"lastName\": \"test\",\r\n    \"email\": \"gh@test.com\",\r\n    \"mobile\": \"09916593472\",\r\n    \"activated\": true,\r\n    \"createdDate\": \"2023-01-07T09:05:29\",\r\n    \"marketId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"resellerId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"roles\": [\r\n        {\r\n            \"name\": \"MARKET_DEVELOPER\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/without_market_users"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market_list",
+					"_postman_id": "28708855-b80a-4fe9-98bb-f03b6320fcf1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/market_list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "c02df21e-f0ca-4809-a9c3-b04ef7a7ca79"
+		},
+		{
+			"name": "market users",
+			"item": [
+				{
+					"name": "api/market/market_users/list",
+					"_postman_id": "77d46dd1-ffa5-45be-b021-83c03c3ecfaf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/market_users/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/market_users/{id}",
+					"_postman_id": "9b75572b-f1bb-4a68-8700-6edbb52c0e94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/market_users/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/roles_list",
+					"_postman_id": "ca189b3f-204c-48a4-860f-2cdc9ad5790a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/roles_list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/reseller/tree",
+					"_postman_id": "83f31a3e-db1e-4029-a091-fd8aa669079c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/reseller/tree"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/market_users/send_create_sms",
+					"_postman_id": "62538a58-f575-431b-badb-e551f21e5a44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\": \"09125778071\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/market_users/send_create_sms"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/market_users",
+					"_postman_id": "71ea6302-67cc-4023-9ff0-30e33be76afb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\": \"11111\",\r\n    \"mobile\": \"09125778071\",\r\n    \"username\": \"test_test\",\r\n    \"firstName\": \"hadiii\",\r\n    \"lastName\": \"test\",\r\n    \"email\": \"gh@test.com\",\r\n    \"activated\": true,\r\n    \"createdDate\": \"2023-01-07T09:05:29\",\r\n    \"marketId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"resellerId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"roles\": [\r\n        {\r\n            \"name\": \"MARKET_DEVELOPER\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/market_users"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/market_users",
+					"_postman_id": "9a063e3f-4f53-4f2a-816f-be70aded6144",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"username\": \"test_test\",\r\n    \"firstName\": \"hadiii\",\r\n    \"lastName\": \"test\",\r\n    \"email\": \"gh@test.com\",\r\n    \"mobile\": \"09916593472\",\r\n    \"activated\": true,\r\n    \"createdDate\": \"2023-01-07T09:05:29\",\r\n    \"resellerId\": \"j9LToA9،2FzPnVDRpKBLiWmA،3D،3D\",\r\n    \"roles\": [\r\n        {\r\n            \"name\": \"MARKET_DEVELOPER\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/market_users"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "4d6f798a-6750-4518-b5fb-f191d8f7ec64"
+		},
+		{
+			"name": "manufacture_model",
+			"item": [
+				{
+					"name": "api/operator/manufacture_model/list",
+					"_postman_id": "0fe82096-b870-40d6-8995-5e05344beead",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture_model/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture_model",
+					"_postman_id": "627a32b4-b3ac-4844-ba28-471a86ef64d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufactureId\": \"SNy،2F5h4tESM4ZPKsgfySlg،3D،3D\",\r\n    \"name\": \"A930123 Pros\",\r\n    \"code\": \"A930123 Prso\",\r\n    \"os\": 1,\r\n    \"platform\": 1,\r\n    \"status\": 10,\r\n    \"description\": \"A930123Pro device\",\r\n     \"iconFile\":{\r\n        \"uploadedFileName\": \"The_Blue_Marble_(remastered).jpg\",\r\n        \"tempFileId\": \"2CDa0mWzq4r7zFZhlB7ScQ،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture_model"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture_model",
+					"_postman_id": "56806033-b1e2-49b7-8b39-093c2a75b106",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"VfwKlzeM7ED،2FekTeiwQSRw،3D،3D\",\r\n    \"manufactureId\": \"SNy،2F5h4tESM4ZPKsgfySlg،3D،3D\",\r\n    \"name\": \"A9301234 Pros\",\r\n    \"code\": \"A9301324Prso\",\r\n    \"os\": 1,\r\n    \"platform\": 1,\r\n    \"status\": 10,\r\n    \"description\": \"A93012Prso\",\r\n     \"iconFile\":{\r\n              \"uploadedFileName\": \"The_Blue_Marble_(remastered).jpg\",\r\n        \"tempFileId\": \"PherUiHBYl3Ibi1wauggiQ،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture_model"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture_model/{id}",
+					"_postman_id": "7b24a39a-9b01-4f77-ba45-80b823ba7c56",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/manufacture_model/VfwKlzeM7ED،2FekTeiwQSRw،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture_model/{id}",
+					"_postman_id": "aa7212a3-20b4-4015-bcbb-555bf840a31d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/manufacture_model/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture_model/image_download/k6OdXIKg،2FvZxaAJ،2FU3OsmA،3D،3D",
+					"_postman_id": "67c4e46d-b8a4-4ce5-be45-38661dae338b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/manufacture_model/image_download/TsRHGKy4vNN6B6EGtbJ4UA،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9a389d85-c8da-4d05-b187-553fc6ec478b"
+		},
+		{
+			"name": "manufacture",
+			"item": [
+				{
+					"name": "api/operator/manufacture_model/list",
+					"_postman_id": "4918cc44-f595-4688-9940-6ac1d5aceef6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture",
+					"_postman_id": "19935d5d-44de-4f52-bd13-f566788813c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test\",\r\n    \"status\": 10,\r\n    \"description\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture",
+					"_postman_id": "eb93d578-ff65-42b5-b81b-9ff1dda0c45b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"Vb82cUUQotlEirGwoiA2hA،3D،3D\",\r\n    \"name\": \"test\",\r\n    \"description\": \"test\",\r\n    \"status\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/manufacture"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture/{id}",
+					"_postman_id": "871453eb-9b7e-4123-8444-bfa1f4bc4db0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/manufacture/Vb82cUUQotlEirGwoiA2hA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/manufacture/{id}",
+					"_postman_id": "d42fba1b-6c7f-401b-aeaa-042870a23d96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{tech_store_url}}/api/operator/manufacture/Vb82cUUQotlEirGwoiA2hA،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "4a54ada1-de21-41a8-90c6-0cd72ebb6b33"
+		},
+		{
+			"name": "app category",
+			"item": [
+				{
+					"name": "api/market/app_category/list",
+					"_postman_id": "7efa170a-56ad-4c31-94cb-50e6131b3624",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_category/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_category",
+					"_postman_id": "78697c4e-b60d-471d-9c11-25fb0d1a120a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"food\",\r\n    \"code\": \"10\",\r\n    \"description\": \"food category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_category"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_category",
+					"_postman_id": "746ba5f3-2857-4f9e-b2cc-d09b252cb4be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6cRkwQM5yXe0fiEpwiVBJA،3D،3D\",\r\n    \"name\": \"food\",\r\n    \"code\": \"10\",\r\n    \"description\": \"food category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_category"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_category/{id}",
+					"_postman_id": "2c54752f-8ca4-43c8-97a3-c25277964889",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/app_category/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_category/{id}",
+					"_postman_id": "96bd8495-ecc9-460f-acef-a121952719cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/app_category/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "6a3aa482-c308-43d5-91c7-bbf44ad054a2"
+		},
+		{
+			"name": "merchant",
+			"item": [
+				{
+					"name": "api/market/merchant/list",
+					"_postman_id": "98a87535-47e2-4cf0-ac27-15b35ef0a55a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/merchant/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/merchant",
+					"_postman_id": "1a590756-e530-49cb-a558-4882b98409a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"name\": \"merchant test 2\",\r\n        \"contactName\": \"khodesh\",\r\n        \"mobile\": \"09123456789\",\r\n        \"phoneNumber\": \"02178945632\",\r\n        \"zipCode\": \"1234567890\",\r\n        \"address\": \"tehran\",\r\n        \"country\": \"iren\",\r\n        \"city\": \"tehran\",\r\n        \"province\": \"tehran\",\r\n        \"status\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/merchant"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/merchant",
+					"_postman_id": "e68c2fd9-4347-46bc-9a9d-3b0399026b4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"e6vpawXwXwB7vGFUHG،2BV،2FQ،3D،3D\",\r\n    \"name\": \"merchant test 2\",\r\n    \"contactName\": \"khodesh\",\r\n    \"mobile\": \"09123456789\",\r\n    \"phoneNumber\": \"02178945632\",\r\n    \"zipCode\": \"1234567890\",\r\n    \"address\": \"tehran\",\r\n    \"country\": \"iren\",\r\n    \"city\": \"tehran\",\r\n    \"province\": \"tehran\",\r\n    \"status\": 10,\r\n    \"createdBy\": \"admin\",\r\n    \"createdDate\": \"2022-12-28T16:30:01.179\",\r\n    \"lastModifiedBy\": \"admin\",\r\n    \"lastModifiedDate\": \"2022-12-28T16:30:01.179\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/merchant"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/merchant/{id}",
+					"_postman_id": "8ba56abf-56dd-4953-9039-5a8bd88873bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/merchant/e6vpawXwXwB7vGFUHG،2BV،2FQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/merchant/excel",
+					"_postman_id": "8969b703-971c-4430-8f46-9a224ef78888",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"condition\" : {\r\n        \"conditionType\": \"AND\",\r\n         \"conditions\": []\r\n    },\r\n    \"isEmpty\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/merchant/excel"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/merchant/{id}",
+					"_postman_id": "7a48c848-0485-461c-b23f-d3b9d24195df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/merchant/e6vpawXwXwB7vGFUHG،2BV،2FQ،3D،3D"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "7e853b48-0520-45c0-8bfa-f39991db5335"
+		},
+		{
+			"name": "group_device",
+			"item": [
+				{
+					"name": "/api/market/group/{id}/assign_devices",
+					"_postman_id": "f277202a-60e8-4450-804f-0de6ab1372d7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"e6vpawXwXwB7vGFUHG،2BV،2FQ،3D،3D\"],\n    \"removeList\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group/2DbHppnf9vH0dXrk8Zs5Pg،3D،3D/assign_devices"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/group/{id}/assigned_devices/list",
+					"_postman_id": "1c46cc38-e32f-43af-962c-fc8a1e8a739a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group/2DbHppnf9vH0dXrk8Zs5Pg،3D،3D/assigned_devices/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/group/{id}/not_assigned_devices/list",
+					"_postman_id": "b7462bc9-3d82-4772-a5e5-9855476e0bc0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group/2DbHppnf9vH0dXrk8Zs5Pg،3D،3D/not_assigned_devices/list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "45d5cd53-26dc-4c0b-8901-dd8e6d518435"
+		},
+		{
+			"name": "device_group",
+			"item": [
+				{
+					"name": "/api/market/device/{id}/assign_groups",
+					"_postman_id": "e49a79b0-71b5-48b1-8f5c-595980195090",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"2DbHppnf9vH0dXrk8Zs5Pg،3D،3D\"],\n    \"removeList\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/6cRkwQM5yXe0fiEpwiVBJA،3D،3D/assign_groups"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/device/{id}/assigned_groups/list",
+					"_postman_id": "d73a8f9e-7623-41d7-b558-89fa5b693796",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/6cRkwQM5yXe0fiEpwiVBJA،3D،3D/assigned_groups/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/device/{id}/not_assigned_groups/list",
+					"_postman_id": "ce6c0bf8-2ab1-4dc0-ad06-e752b4aa1d57",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/6cRkwQM5yXe0fiEpwiVBJA،3D،3D/not_assigned_groups/list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "09b7a9fc-71d8-4f88-9ea3-0cb1c0448c6f"
+		},
+		{
+			"name": "group",
+			"item": [
+				{
+					"name": "/api/market/group",
+					"_postman_id": "15d41ec2-5955-43f3-973d-eb129652d2f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test1\",\r\n    \"status\": 10,\r\n    \"description\": \"this is for test\",\r\n    \"marketId\" : \"Rs0Jr33s2F3Fdh6MlodxaA،3D،3D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/group",
+					"_postman_id": "eb95a8bd-e32d-426e-bc61-82d9ac450e70",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group/tROzxg5lZmikZBKiWBkPKQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/group/list",
+					"_postman_id": "0541ee7d-5d7a-4c8b-9ee2-4e0fae8cee00",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/group",
+					"_postman_id": "d5877b2e-260f-4125-91c1-278c5f72ef57",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/group/tROzxg5lZmikZBKiWBkPKQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/group",
+					"_postman_id": "931b6bb4-42e9-4bbe-91b0-ae5fb85ad636",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"tROzxg5lZmikZBKiWBkPKQ،3D،3D\",\r\n    \"name\": \"1گروه سداد\",\r\n    \"status\": 10,\r\n    \"description\": \"گروه سداد پرداخت به منظور مدیریت دستگاه های آن شرکت محترم\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/group"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "bc0f7b5b-6869-4045-9181-6321f63cf33d",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "e81c6efe-4a61-44ac-bafe-da7144d2a0d0"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "c8db2608-4907-4566-88ac-64138dbe0fb8"
+					}
+				}
+			]
+		},
+		{
+			"name": "app",
+			"item": [
+				{
+					"name": "/api/market/app",
+					"_postman_id": "1ff6fb2b-0139-49bb-bda2-00ae764c0f3b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Feshan\",\r\n    \"packageName\": \"ir.Feshan\",\r\n    \"marketId\": 3,\r\n    \"status\": 10,\r\n    \"os\": 1,\r\n    \"downloadCount\": 0,\r\n    \"rateSum\": 0,\r\n    \"rateCount\": 0,\r\n    \"allowUninstall\": true,\r\n    \"autoUpdate\": false,\r\n    \"forAllManufactureModels\": false,\r\n    \"iconFile\":{\r\n        \"uploadedFileName\":\"barnamenevis.jpg\",\r\n        \"tempFileId\":\"xJKiWqKTsyD1l،2FsCvH0tPw،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app/{id}/assign_manufacture_model",
+					"_postman_id": "5af83b48-68d5-4fba-8388-16b9356cd6df",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addList\":[\"6cRkwQM5yXe0fiEpwiVBJA،3D،3D\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/rGQdFMgIC9gVUY7vePAfgQ،3D،3D/assign_manufacture_model"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app/not_install_app/{id}",
+					"_postman_id": "a607b46a-1ff1-437a-a45c-8b5a7e55fb74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/not_install_app/J،2Bq6qMozCIqR3FGaxiyphg،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app",
+					"_postman_id": "66dab08c-b313-4cfe-ac76-83e916c2099b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/tROzxg5lZmikZBKiWBkPKQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app/list",
+					"_postman_id": "07a19120-6435-4073-a229-f28dd9f53213",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app",
+					"_postman_id": "b169a4e7-a549-4e32-9d7f-a0ed188a55d0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/app/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app",
+					"_postman_id": "a5961f07-0470-433e-ab40-893883df4f4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6cRkwQM5yXe0fiEpwiVBJA،3D،3D\",\r\n    \"name\": \"Balad\",\r\n    \"packageName\": \"ir.balad\",\r\n    \"status\": 10,\r\n    \"os\": 1,\r\n    \"appCategory\":{\r\n        \"id\":\"J9Eyi3WN7hGpxSAdsxMWxw،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/temp_upload",
+					"_postman_id": "c5b14232-f005-481f-9e28-0cee166e03d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/alitaban/Pictures/barnamenevis.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "{{tech_store_url}}/api/temp_upload"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_category/list",
+					"_postman_id": "08e61f26-4dcb-4c43-949c-08e6c2120220",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_category/list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "0bbac588-6a65-4b98-b1ed-4fe1df38c649",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "2a29fc35-7544-4bcd-b022-6284c609c636"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "b5835483-6f23-4ccf-8201-a0646ca93c40"
+					}
+				}
+			]
+		},
+		{
+			"name": "app_apk",
+			"item": [
+				{
+					"name": "/api/market/app_apk",
+					"_postman_id": "0cc55c9c-03f9-4a1a-8cc7-59f7535a1b5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"releaseNotes\":\"test 1\",    \r\n    \"app\": {\r\n        \"id\": \"rGQdFMgIC9gVUY7vePAfgQ،3D،3D\"\r\n    },\r\n    \"apkFile\":{\r\n        \"tempFileId\":\"LLcRKHqvHkmI9LIDrC90kA،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_apk"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_apk",
+					"_postman_id": "f8ce7238-6bda-4242-bd8d-a7836cf10d6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_apk/tROzxg5lZmikZBKiWBkPKQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app_apk/change_status",
+					"_postman_id": "cdf79c00-e67d-4e90-9efb-75a697d25d0f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"releaseNotes\":\"test 1\",    \r\n    \"app\": {\r\n        \"id\": \"rGQdFMgIC9gVUY7vePAfgQ،3D،3D\"\r\n    },\r\n    \"apkFile\":{\r\n        \"tempFileId\":\"LLcRKHqvHkmI9LIDrC90kA،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_apk"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app/{id}/app_apk/list",
+					"_postman_id": "b0d2185b-5c87-49b7-a0e5-98243e16a5bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/rGQdFMgIC9gVUY7vePAfgQ،3D،3D/app_apk/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app_apk",
+					"_postman_id": "3704146b-8790-491a-bd47-1688e31a229a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/app_apk/44kl5oRuwwOFTNgpyZROIA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app_apk/{id}/download",
+					"_postman_id": "4701c232-0e52-4a2c-9b46-fce63e33d9c7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/app_apk/S6IVu0hsDMavpHJsII9s6Q،3D،3D/download"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/temp_upload",
+					"_postman_id": "9cd552b4-07ae-406d-9f0f-af406eaac3bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/a.ghazi/Pictures/The_Blue_Marble_(remastered).jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "{{tech_store_url}}/api/temp_upload"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "42df9528-389b-4e9c-b144-9b0afd66a3e8",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "f502856a-ca08-4460-8f83-dcb76c73b757"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "43ae0767-9e79-41ec-8d2f-261edb926ce0"
+					}
+				}
+			]
+		},
+		{
+			"name": "firmware",
+			"item": [
+				{
+					"name": "/api/operator/firmware",
+					"_postman_id": "67610911-419a-4a35-bdeb-1cb4d21d9e9e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ver 1.021\",    \r\n    \"manufactureModel\": {\r\n        \"id\": \"Ul4FZq9LHDqbuNbVaEHRyg،3D،3D\"\r\n    },\r\n    \"contentFile\":{\r\n        \"tempFileId\":\"MILheMQoX0jKItW44OQS1Q،3D،3D\"\r\n    },\r\n    \"description\" : \"test3\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/firmware"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/firmware",
+					"_postman_id": "105eb1c7-d762-40ed-be7c-868fc5d2d394",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/firmware/SfjQoHWRLDHiWY07NW68Sw،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/app/{id}/firmware/list",
+					"_postman_id": "52ff6eb9-9e17-4925-a6ad-b6c82e9030de",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/app/Ul4FZq9LHDqbuNbVaEHRyg،3D،3D/firmware/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/firmware",
+					"_postman_id": "bbb110a5-a93d-4a2f-a016-c66aad9119c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/operator/firmware/D3umXV1oFLeYB7ujZbL2ug،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/firmware/{id}/download",
+					"_postman_id": "971eb1b2-a648-4699-89ac-f5b0afa9af12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/operator/firmware/wzvNpXfb5QRzU3AfED2TCg،3D،3D/download"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/temp_upload",
+					"_postman_id": "f5a1474f-82ff-49d9-912e-632204a2aec4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/a.ghazi/Pictures/The_Blue_Marble_(remastered).jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "{{tech_store_url}}/api/temp_upload"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "5397d257-701e-47e5-a6bb-c46498adbfa2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "c2f1bab9-4f11-4ad6-8101-3c85a9ea561b"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "15bdbf33-f784-41ac-a5ab-6d2905558e17"
+					}
+				}
+			]
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "/api/market/dashboard/top10AppDownload",
+					"_postman_id": "73984026-a32a-4e71-bec1-6e3d88e89a5d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/dashboard/top10AppDownload"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/dashboard/numberOfTerminalsByReseller",
+					"_postman_id": "e5abe30b-8710-4844-b754-376c36aea461",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/dashboard/numberOfTerminalsByReseller"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/dashboard/top10Merchant",
+					"_postman_id": "85ee9aaa-6ac7-452c-b4ac-9717f67e2ca5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/dashboard/top10Merchant"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/dashboard/numberOfTerminalsByModel",
+					"_postman_id": "587591e3-1dde-4efa-8165-7c052b72065f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/dashboard/numberOfTerminalsByModel"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/dashboard/count_child_level_one_according_to_device",
+					"_postman_id": "eccc5844-f7a1-4a57-8fc1-7a120f2f94b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/dashboard/count_child_level_one_according_to_device"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/dashboard/device_count",
+					"_postman_id": "88d4f8e7-84bd-41dd-9700-6148a9b0474b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{tech_store_url}}/api/market/dashboard/device_count"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "9a4f8534-38da-4656-aaf9-f4834e0c1b5b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "4c76a3ad-58bb-4b39-a268-b20c8eeb1904"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "6024980a-f098-4ed0-946c-8d5e050842a1"
+					}
+				}
+			]
+		},
+		{
+			"name": "app_file",
+			"item": [
+				{
+					"name": "/api/market/app_file",
+					"_postman_id": "da690297-e4b4-4eff-8348-d6ec4940109f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\":\"test 1\",    \r\n    \"fileType\":1,    \r\n    \"viewOrder\":1,\r\n    \"app\": {\r\n        \"id\": \"rGQdFMgIC9gVUY7vePAfgQ،3D،3D\"\r\n    },\r\n    \"fileDto\":{\r\n        \"tempFileId\":\"WWxevE4bSiXqbYkdEVITgA،3D،3D\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_file"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/app_file",
+					"_postman_id": "b64bdc55-c78c-4303-9e9d-86ccd97e1355",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app_file/tROzxg5lZmikZBKiWBkPKQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app/{id}/app_file/list",
+					"_postman_id": "74851d35-ea6e-4743-beca-871b204c3338",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/app/rGQdFMgIC9gVUY7vePAfgQ،3D،3D/app_file/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app_file",
+					"_postman_id": "cc800a2d-c04f-4cd1-853a-6312a79d6556",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/app_file/xXgD5zvEw9iOHQLtB8YhGQ،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/app_file/{id}/download",
+					"_postman_id": "ecd669b5-7d9a-4bcd-b1d5-deaa2ddc5a29",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/app_file/xXgD5zvEw9iOHQLtB8YhGQ،3D،3D/download"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/temp_upload",
+					"_postman_id": "3883f699-bc12-4943-bf5d-558aefea1a3c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/alitaban/Pictures/17640.jpg"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "{{tech_store_url}}/api/temp_upload"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "3a485ada-8ca6-4994-bb44-4c9b27c67cf8",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "323b7bee-1344-4a85-ab5e-505b4986f714"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "cfdb7552-899f-428d-8d7b-6ffdc487f956"
+					}
+				}
+			]
+		},
+		{
+			"name": "market",
+			"item": [
+				{
+					"name": "api/operator/market",
+					"_postman_id": "247dfb12-f6ad-4452-a77a-fdc528201ed0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"تست استور\",\r\n    \"domain\": \"https://bayandor.tosantechno.com\",\r\n    \"status\": 10,\r\n    \"terminalCountLimit\": 1000,\r\n    \"defaultLangCode\": \"fa_IR\",\r\n    \"adminEmail\": \"e.bayandor@tosantechno.com\",\r\n    \"expireDate\": \"2022-11-02T00:00:00Z\",\r\n    \"userCountLimit\": 505,\r\n    \"merchantCountLimit\": 500,\r\n    \"appCountLimit\": 10,\r\n    \"description\": \"اولین مارکتکنو\",\r\n    \"resellerMobile\": \"09125778071\",\r\n    \"resellerPhoneNumber\": \"021-77889911\",\r\n    \"resellerName\": \"تکنو\",\r\n    \"resellerAddress\": \"تهران\",\r\n    \"resellerCountry\": \"ایران\",\r\n    \"resellerCity\": \"تهران\",\r\n    \"resellerProvince\": \"تهران\",\r\n    \"resellerLocation\": {\r\n        \"latitude\": 50.365,\r\n        \"longitude\": 52.3658\r\n    },\r\n    \"resellerEmail\": \"a@b.com\",\r\n    \"showMap\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/market"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market/{id}",
+					"_postman_id": "d6fb3d93-3bf5-4736-b224-10a05db762ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/market/Vb82cUUQotlEirGwoiA2hA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market/list",
+					"_postman_id": "2194827c-a514-4320-8209-416f8703272e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/market/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market/{id}",
+					"_postman_id": "7597bde4-74fe-4348-ade9-05d0500c4bfe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/operator/market/Vb82cUUQotlEirGwoiA2hA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/market",
+					"_postman_id": "f5b1c40f-f907-4d7d-bbb2-6ad5f039c22b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"Rs0Jr33s2F3Fdh6MlodxaA،3D،3D\",\r\n    \"name\": \"first market1\",\r\n    \"domain\": \"https://bayandor.tosantechno.com\",\r\n    \"status\": 10,\r\n    \"terminalCountLimit\": 100,\r\n    \"adminEmail\": \"market@a.com\",\r\n    \"showMap\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/market"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "793fbb3d-985c-4155-a63e-1a2c6cd455b0",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "548c0229-8b1f-41fa-bac3-207db1fc6f7f"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "cb8b4016-d33c-4aec-b460-84a9f80f8409"
+					}
+				}
+			]
+		},
+		{
+			"name": "common",
+			"item": [
+				{
+					"name": "api/market/common/manufacture_model/{id}",
+					"_postman_id": "8802da0a-6aba-40f5-b315-763562f29598",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/common/manufacture_model/6cRkwQM5yXe0fiEpwiVBJA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/common/manufacture_model/filter/{name}",
+					"_postman_id": "554f9502-cf7d-4725-ac4b-c9ac0cc4e3f9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/common/manufacture_model/filter/Pro"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/common/manufacture",
+					"_postman_id": "7f60f9da-bd7d-4f7f-9ba6-51170b145d71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/common/manufacture"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "37751396-cc29-40be-a1b6-3cd64c237284"
+		},
+		{
+			"name": "reseller",
+			"item": [
+				{
+					"name": "/api/market/reseller",
+					"_postman_id": "58245892-d013-4ef4-89c1-78af2cfa6857",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"تهران\",\r\n    \"city\": \"تهران\",\r\n    \"country\": \"Iran\",\r\n    \"email\": \"e.bayandor@tosantechno.com\",\r\n    \"latitude\": 0,\r\n    \"longitude\": 0,\r\n    \"marketId\": \"sYsHH4DLYl03j7ipL9sYSA،3D،3D\",\r\n    \"mobile\": \"09122469704\",\r\n    \"name\": \"Ehsan\",\r\n    \"parentId\": null,\r\n    \"phoneNumber\": \"0214444444\",\r\n    \"province\": \"Tehran\",\r\n    \"status\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/reseller/tree"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/reseller/tree/move",
+					"_postman_id": "aa0a36d8-d117-4ce4-af5f-693a730a8ab0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"n1YTrnd9ctVBV27MJlCQ2w،3D،3D\",\r\n    \"treeMoveTypeEnum\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/reseller/tree/move"
+					},
+					"response": []
+				},
+				{
+					"name": "api/market/reseller",
+					"_postman_id": "5a3b8a8c-e9db-44e9-b5e6-ea75e249f318",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/reseller/yxQ1uZGBroH7ZGEgF2cpSg،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/reseller",
+					"_postman_id": "e54877f1-4c54-4705-bdff-67638edf18d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/reseller/،2FiKCV،2FNEYA5،2FOtRkTMh6Wg،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/reseller",
+					"_postman_id": "bbfa9d2c-b028-4386-a1d1-cdc10c00c959",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"،2FiKCV،2FNEYA5،2FOtRkTMh6Wg،3D،3D\",\r\n    \"address\": \"تهران\",\r\n    \"city\": \"تهران\",\r\n    \"country\": \"Iran\",\r\n    \"email\": \"e.bayandor@tosantechno.com\",\r\n    \"latitude\": 0,\r\n    \"longitude\": 0,\r\n    \"marketId\": \"sYsHH4DLYl03j7ipL9sYSA،3D،3D\",\r\n    \"mobile\": \"09122469704\",\r\n    \"name\": \"Ehsan\",\r\n    \"parentId\": null,\r\n    \"phoneNumber\": \"0214444444\",\r\n    \"province\": \"Tehran\",\r\n    \"status\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/reseller"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/reseller/tree",
+					"_postman_id": "71fba5b3-28e0-46ad-a279-aab358e8e39b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_admin_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": "{{tech_store_url}}/api/market/reseller/tree"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/reseller/tree",
+					"_postman_id": "c46d2061-7b3b-405c-a013-76c122aed4c6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"aZH4NPT،2FZq5،2BVqI2gKIuSA،3D،3D\",\r\n    \"address\": \"تهران\",\r\n    \"city\": \"تهران\",\r\n    \"country\": \"Iran\",\r\n    \"email\": \"test1@tosantechno.com\",\r\n    \"latitude\": 0,\r\n    \"longitude\": 0,\r\n    \"marketId\": \"Rs0Jr33s2F3Fdh6MlodxaA،3D،3D\",\r\n    \"mobile\": \"09121234567\",\r\n    \"name\": \"test1\",\r\n    \"parentId\": \"edzWGD،2F21V،2BImdoFXZ8ClA،3D،3D\",\r\n    \"phoneNumber\": \"0214444444\",\r\n    \"province\": \"Tehran\",\r\n    \"status\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/reseller/tree"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "f818795a-fdf4-4287-8f8e-d56659c664e4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "92b459ca-3011-4fd5-94aa-6f9228387865"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "7bff690a-1939-4619-92fc-2f3b86993ce2"
+					}
+				}
+			]
+		},
+		{
+			"name": "operator firmware_markets",
+			"item": [
+				{
+					"name": "/api/operator/firmware/{id}/assign_markets",
+					"_postman_id": "e6b3adf5-e39e-47f3-91bd-91feb6083516",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"Rs0Jr33s2F3Fdh6MlodxaA،3D،3D\"],\n    \"removeList\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/firmware/wzvNpXfb5QRzU3AfED2TCg،3D،3D/assign_markets"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/firmware/{id}/assigned_markets/list",
+					"_postman_id": "ac796810-ab2c-4b47-b9b1-86320c8b28f5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/firmware/wzvNpXfb5QRzU3AfED2TCg،3D،3D/assigned_markets/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/firmware/{id}/not_assigned_markets/list",
+					"_postman_id": "2236a459-0f03-4ae3-b9e3-3bbe536888b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"addList\":[\"97kiD،2FXE7bzgzOTymTjkuw،3D،3D\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/firmware/wzvNpXfb5QRzU3AfED2TCg،3D،3D/not_assigned_markets/list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "38f6d1b2-ec1f-40da-b599-fe6f2d2a98a6"
+		},
+		{
+			"name": "market firmware",
+			"item": [
+				{
+					"name": "/api/market/firmware/list",
+					"_postman_id": "69ab19d1-e275-4dee-a6c5-6cdd3926385a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/firmware/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/device/{id}/firmware/list",
+					"_postman_id": "1ba0e6b0-a216-4f1b-960f-94f3768f3690",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/device/ZTBta9OInovGiztgpcQ2Yw،3D،3D/firmware/list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "2c6a10f1-1096-4c3b-ae81-de8e7b21121e"
+		},
+		{
+			"name": "async_task",
+			"item": [
+				{
+					"name": "/api/market/async_task for merchants",
+					"_postman_id": "4c417d97-ae6a-49c4-8eda-489d9e680d69",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" : \"test one\" ,\r\n  \"fileDtoList\" : [\r\n      {\"tempFileId\": \"0UEo،2FeyZDvwk3bZjjNL1pA،3D،3D\"}\r\n  ]   ,\r\n  \"actionType\" : \"1\" ,\r\n  \"description\" : \"test one\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/async_task"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/async_task for devices",
+					"_postman_id": "15ef15f2-6dca-4bd1-a523-307d708a2a1e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" : \"test devices\" ,\r\n  \"fileDtoList\" : [\r\n      {\"tempFileId\": \"P،2Fmx،2BmB5oi8irMuivkrTPA،3D،3D\"}\r\n  ]   ,\r\n  \"actionType\" : \"2\" ,\r\n  \"description\" : \"test devices\" ,\r\n  \"params\":{\"groups\":[\"soKkL6cen749asBxG،2F5njQ،3D،3D\"]}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/async_task"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/async_task/list",
+					"_postman_id": "df7c8201-97cd-4293-807b-f2bb80a8878a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" : \"test devices\" ,\r\n  \"fileDtoList\" : [\r\n      {\"tempFileId\": \"P،2Fmx،2BmB5oi8irMuivkrTPA،3D،3D\"}\r\n  ]   ,\r\n  \"actionType\" : \"2\" ,\r\n  \"description\" : \"test devices\" ,\r\n  \"params\":{\"groups\":[\"soKkL6cen749asBxG،2F5njQ،3D،3D\"]}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/async_task/list"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/async_task_file/download/*",
+					"_postman_id": "c87f00da-675c-440f-aaeb-de650f31210b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" : \"test devices\" ,\r\n  \"fileDtoList\" : [\r\n      {\"tempFileId\": \"P،2Fmx،2BmB5oi8irMuivkrTPA،3D،3D\"}\r\n  ]   ,\r\n  \"actionType\" : \"2\" ,\r\n  \"description\" : \"test devices\" ,\r\n  \"params\":{\"groups\":[\"soKkL6cen749asBxG،2F5njQ،3D،3D\"]}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/async_task_file/download/67Oc5HIp0mbF6ux،2F1RgANA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/market/async_task",
+					"_postman_id": "99321416-89a7-4dd4-a991-d7ec6713693e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"title\" : \"test devices\" ,\r\n  \"fileDtoList\" : [\r\n      {\"tempFileId\": \"P،2Fmx،2BmB5oi8irMuivkrTPA،3D،3D\"}\r\n  ]   ,\r\n  \"actionType\" : \"2\" ,\r\n  \"description\" : \"test devices\" ,\r\n  \"params\":{\"groups\":[\"soKkL6cen749asBxG،2F5njQ،3D،3D\"]}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/market/async_task/ndMxcKnnKNqNm8W8pRf5zg،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/temp_upload",
+					"_postman_id": "a097cc1d-3ae3-46f6-978c-f9efd594d4c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/alitaban/Documents/devices-template.xlsx"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": "{{tech_store_url}}/api/temp_upload"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "4889356c-023f-4e19-92ed-6a8af63b8d69"
+		},
+		{
+			"name": "administration",
+			"item": [
+				{
+					"name": "/api/administration/setting/reload",
+					"_postman_id": "fbbca85d-49e2-4bf7-ae19-aceee1ab93c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/administration/setting/reload"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "30b99cbd-98fe-40b1-b8d5-2661bb76978a",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "{{tech_store_token}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "0ca10ada-7799-4c0e-9b1d-e71b4cee91f8"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "1afe1455-fc4b-4997-8d6d-9e850a7025d1"
+					}
+				}
+			]
+		},
+		{
+			"name": "operator_device_move",
+			"item": [
+				{
+					"name": "api/operator/reseller_tree/{marketId}",
+					"_postman_id": "dbe3e633-ed18-47dc-bf7d-d5c0e4035379",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/reseller_tree/Rs0Jr33s2F3Fdh6MlodxaA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/merchant/list/{resellerId}",
+					"_postman_id": "471cc1d9-e4eb-4af8-ace8-96cfef495c05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/merchant/list/nNl8WCHvW16AB9oYWQalYA،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/device/list",
+					"_postman_id": "6a6eebd9-2eb2-4282-80f2-0a8b10b66778",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/device/list"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/device",
+					"_postman_id": "d7205f95-308d-42b5-bff0-5279f6dc6f18",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"mDTk2qe3HjuUg2CBGzab9A،3D،3D\",\r\n    \"marketId\": \"Rs0Jr33s2F3Fdh6MlodxaA،3D،3D\" , \r\n    \"resellerId\": \"edzWGD،2F21V،2BImdoFXZ8ClA،3D،3D\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/device"
+					},
+					"response": []
+				},
+				{
+					"name": "api/operator/device/{id}",
+					"_postman_id": "7d1e2118-73f5-4907-982a-27679e71ad83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"message\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/device/J،2Bq6qMozCIqR3FGaxiyphg،3D،3D"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/operator/market_list",
+					"_postman_id": "98cc4945-5397-4d9b-82fb-393178157583",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{tech_store_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serialNo\": \"1170002482\",\r\n    \"message\": \"hello there\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{tech_store_url}}/api/operator/market_list"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "33495432-9ad0-4ce4-a776-f6616365301e"
+		},
+		{
+			"name": "bulk_command",
+			"item": [
+				{
+					"name": "operator",
+					"item": [
+						{
+							"name": "api/operator/bulkCommand/bulk_update",
+							"_postman_id": "bbcd6565-0ca4-428b-ab28-7f24894c5769",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": "{{tech_store_url}}/api/operator/bulkCommand/bulk_update"
+							},
+							"response": []
+						},
+						{
+							"name": "api/operator/bulkCommand/bulk_cancel_All",
+							"_postman_id": "e5466176-71d2-4bf6-8db8-d962d6a6165c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"url": "{{tech_store_url}}/api/operator/bulkCommand/bulk_cancel_All"
+							},
+							"response": []
+						},
+						{
+							"name": "api/operator/bulkCommand/list",
+							"_postman_id": "4f02bac5-8f2d-42a5-8a2e-847f330ad2a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/operator/bulkCommand/list"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "be6c3ff0-d83d-4ff7-b071-4241ab75fb46",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "market",
+					"item": [
+						{
+							"name": "api/market/bulkCommand/list",
+							"_postman_id": "c31e294f-a1ce-4d72-b8cf-582ebf89a18a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/bulkCommand/list"
+							},
+							"response": []
+						},
+						{
+							"name": "api/market/bulkCommand/bulk_update",
+							"_postman_id": "5bf0be2e-5ae9-43e8-9298-aef66e464252",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/bulkCommand/bulk_update"
+							},
+							"response": []
+						},
+						{
+							"name": "api/market/bulkCommand/bulk_cancel_All",
+							"_postman_id": "5c74a5a8-e6c8-467d-ab76-db4960fd23f6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/bulkCommand/bulk_cancel_All"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "1c7997c1-dae1-4549-b29b-445da3fe456d",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "b98cf5cf-590b-4ce5-9185-5ef3653ddc13"
+		},
+		{
+			"name": "workflow",
+			"item": [
+				{
+					"name": "app_apk_workflow",
+					"item": [
+						{
+							"name": "/api/market/app_apk_workflow/list",
+							"_postman_id": "d9c4f1a4-648d-4264-ac01-477a98a49e92",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/app_apk_workflow/list"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/app_apk_workflow/{id}/app_apk",
+							"_postman_id": "66699b65-032b-4d87-b0e1-91a1e9145487",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/app_apk_workflow/zgKBj7snGtPxcdCtlT9vJg،3D،3D/app_apk"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/app_apk_workflow/change_status",
+							"_postman_id": "e779fdab-0dfe-4c3a-abab-0a59a796768a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"44kl5oRuwwOFTNgpyZROIA،3D،3D\",\n    \"isAccept\":true,\n    \"description\":\"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/app_apk_workflow/change_status"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "adde2294-301d-449a-a899-db43056fcca4",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "definitions",
+					"item": [
+						{
+							"name": "/api/market/work_flow_definitions",
+							"_postman_id": "9a09fea4-ce57-4de0-b1f4-f787735a953c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/work_flow_definitions",
+							"_postman_id": "759a3a6f-38d4-4acf-9f12-8a019d177c4a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"roleId\":null,\n    \"userId\":\"6cRkwQM5yXe0fiEpwiVBJA،3D،3D\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/work_flow_definitions/move",
+							"_postman_id": "4cacd320-f9fb-4d1d-92ba-9b3dae3b3c5e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\":\"e6vpawXwXwB7vGFUHG،2BV،2FQ،3D،3D\",\n    \"treeMoveTypeEnum\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions/move"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/work_flow_definitions/{id}",
+							"_postman_id": "be8f7306-65e0-48fd-8978-4d02beb6d3bd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions/H،2BN2oY9Ub،2FWN،2BcjJs649yQ،3D،3D"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/work_flow_definitions/roles_list",
+							"_postman_id": "2e810624-5d2f-4e48-90c9-8dfc61136781",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions/roles_list"
+							},
+							"response": []
+						},
+						{
+							"name": "/api/market/work_flow_definitions/market_users/list",
+							"_postman_id": "c5e39431-3feb-46c1-95f9-30978e9dc35f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{tech_store_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"conditionType\": \"AND\",\r\n    \"conditions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{tech_store_url}}/api/market/work_flow_definitions/market_users/list"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "118f4d26-5815-466a-8683-226e626481b0",
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "9cb44596-f36b-45a4-b548-41620ab93a05"
+		}
+	]
+}
