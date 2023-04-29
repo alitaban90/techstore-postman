@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "702fe1a6-7b42-456f-b5f2-565778896f90",
-		"name": "Tech store Copy",
+		"name": "Tech store",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -23,7 +23,7 @@
 							}
 						}
 					],
-					"_postman_id": "694480e8-55b4-44fb-82f9-557ec91aa743",
+					"id": "694480e8-55b4-44fb-82f9-557ec91aa743",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -51,7 +51,7 @@
 				},
 				{
 					"name": "api/account",
-					"_postman_id": "a6f200ff-2aa5-428d-9bbf-81ebbbf8f4d2",
+					"id": "a6f200ff-2aa5-428d-9bbf-81ebbbf8f4d2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -70,7 +70,7 @@
 				},
 				{
 					"name": "api/account",
-					"_postman_id": "94ed2332-bea5-463f-99ab-62ed8fce2eca",
+					"id": "94ed2332-bea5-463f-99ab-62ed8fce2eca",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -97,14 +97,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "854577a8-a7d6-4d9c-b89d-ddedc291b807"
+			"id": "854577a8-a7d6-4d9c-b89d-ddedc291b807"
 		},
 		{
 			"name": "command",
 			"item": [
 				{
 					"name": "/api/market/command/message",
-					"_postman_id": "0d7a27ae-7816-453d-b69d-d5606349fe58",
+					"id": "0d7a27ae-7816-453d-b69d-d5606349fe58",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -132,7 +132,7 @@
 				},
 				{
 					"name": "/api/market/command/locale_change",
-					"_postman_id": "8d04e01c-71bb-422b-9db6-ea3a5ad69fec",
+					"id": "8d04e01c-71bb-422b-9db6-ea3a5ad69fec",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -160,7 +160,7 @@
 				},
 				{
 					"name": "/api/market/command/screen_brightness_change",
-					"_postman_id": "b62c097c-748a-48cf-977d-c7252fcfbdf7",
+					"id": "b62c097c-748a-48cf-977d-c7252fcfbdf7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -188,7 +188,7 @@
 				},
 				{
 					"name": "/api/market/command/volume_change",
-					"_postman_id": "898c7743-b51f-44a9-86ad-0fdea2f710cd",
+					"id": "898c7743-b51f-44a9-86ad-0fdea2f710cd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -216,7 +216,7 @@
 				},
 				{
 					"name": "/api/market/command/reboot",
-					"_postman_id": "8d45de3f-2906-488a-ab52-39bdd82cb200",
+					"id": "8d45de3f-2906-488a-ab52-39bdd82cb200",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -244,7 +244,7 @@
 				},
 				{
 					"name": "/api/market/command/install_firmware",
-					"_postman_id": "2c67617b-0090-45c8-bf7b-ba315a3de1de",
+					"id": "2c67617b-0090-45c8-bf7b-ba315a3de1de",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -272,7 +272,7 @@
 				},
 				{
 					"name": "/api/market/command/send_device",
-					"_postman_id": "ae763f86-ccde-4b33-85e5-a80edc2940cd",
+					"id": "ae763f86-ccde-4b33-85e5-a80edc2940cd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -300,7 +300,7 @@
 				},
 				{
 					"name": "/api/market/command/enable_request_response_log",
-					"_postman_id": "601da7a6-bc58-459a-8c7c-9268a044d593",
+					"id": "601da7a6-bc58-459a-8c7c-9268a044d593",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -328,7 +328,7 @@
 				},
 				{
 					"name": "/api/market/command/resend_all_data",
-					"_postman_id": "57bf9f79-d929-4329-a13e-f330a4ed8927",
+					"id": "57bf9f79-d929-4329-a13e-f330a4ed8927",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -356,7 +356,7 @@
 				},
 				{
 					"name": "/api/market/command/fail_all_commands",
-					"_postman_id": "ce58e01c-a990-407c-bca6-506b833cf891",
+					"id": "ce58e01c-a990-407c-bca6-506b833cf891",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -384,7 +384,7 @@
 				},
 				{
 					"name": "/api/market/command/send_device_logs",
-					"_postman_id": "a754bd33-1818-4895-866c-4ad3b6aaf3b3",
+					"id": "a754bd33-1818-4895-866c-4ad3b6aaf3b3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -412,7 +412,7 @@
 				},
 				{
 					"name": "/api/market/command/bluetooth_change_status",
-					"_postman_id": "2cce8b52-1744-4055-adcb-f803822634ac",
+					"id": "2cce8b52-1744-4055-adcb-f803822634ac",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -440,7 +440,7 @@
 				},
 				{
 					"name": "/api/market/command/wifi_change_status",
-					"_postman_id": "85f03986-e140-4267-b0aa-a8594c100f82",
+					"id": "85f03986-e140-4267-b0aa-a8594c100f82",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -468,7 +468,7 @@
 				},
 				{
 					"name": "/api/market/command/gps_change_status",
-					"_postman_id": "bbd8d81b-1bb8-4d9d-b9fd-c77ab0412836",
+					"id": "bbd8d81b-1bb8-4d9d-b9fd-c77ab0412836",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -496,7 +496,7 @@
 				},
 				{
 					"name": "/api/market/command/printer_change_status",
-					"_postman_id": "cba3de01-41a7-4475-996b-3ffe9903049d",
+					"id": "cba3de01-41a7-4475-996b-3ffe9903049d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -524,7 +524,7 @@
 				},
 				{
 					"name": "/api/market/command/app_management",
-					"_postman_id": "fcf5be9a-dcf8-4e3f-8d7d-f7bfb50be9b3",
+					"id": "fcf5be9a-dcf8-4e3f-8d7d-f7bfb50be9b3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -552,7 +552,7 @@
 				},
 				{
 					"name": "api/market/command/list",
-					"_postman_id": "7a9a99cc-625c-48ab-9f2e-aaca53901349",
+					"id": "7a9a99cc-625c-48ab-9f2e-aaca53901349",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -580,7 +580,7 @@
 				},
 				{
 					"name": "api/market/command/cancel_command/{id}",
-					"_postman_id": "eae6fe5a-65b1-4e5f-972c-08780bb985df",
+					"id": "eae6fe5a-65b1-4e5f-972c-08780bb985df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -607,14 +607,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "86f3686d-381f-4a98-a39e-3a7e7cd5a4de"
+			"id": "86f3686d-381f-4a98-a39e-3a7e7cd5a4de"
 		},
 		{
 			"name": "bulk_install",
 			"item": [
 				{
 					"name": "/api/market/command/bulk_install_app",
-					"_postman_id": "96df7dac-d887-4657-b28d-0073924f1631",
+					"id": "96df7dac-d887-4657-b28d-0073924f1631",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -642,7 +642,7 @@
 				},
 				{
 					"name": "/api/market/command/bulk_install_firmware",
-					"_postman_id": "00516a75-f476-4d09-9182-a028e0c42b22",
+					"id": "00516a75-f476-4d09-9182-a028e0c42b22",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -669,14 +669,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "5d44d61b-7fbf-42e5-9ae2-ce24ae9f229d"
+			"id": "5d44d61b-7fbf-42e5-9ae2-ce24ae9f229d"
 		},
 		{
 			"name": "device",
 			"item": [
 				{
 					"name": "api/market/device/download_logs",
-					"_postman_id": "d6125f2d-9889-46a8-a994-edeb2171a67d",
+					"id": "d6125f2d-9889-46a8-a994-edeb2171a67d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -721,7 +721,7 @@
 				},
 				{
 					"name": "api/market/device",
-					"_postman_id": "39ab374d-5bdd-4d0b-89b7-29f3f0315731",
+					"id": "39ab374d-5bdd-4d0b-89b7-29f3f0315731",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -765,7 +765,7 @@
 				},
 				{
 					"name": "api/market/device/device_data/{id}",
-					"_postman_id": "66864512-0709-47e4-801d-348871ddbbee",
+					"id": "66864512-0709-47e4-801d-348871ddbbee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -793,7 +793,7 @@
 				},
 				{
 					"name": "api/market/device/list",
-					"_postman_id": "0c6785d8-2153-4ea0-bf60-2b09511bee6e",
+					"id": "0c6785d8-2153-4ea0-bf60-2b09511bee6e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -821,7 +821,7 @@
 				},
 				{
 					"name": "api/market/device/excel",
-					"_postman_id": "6bc01d3d-6c24-47e4-aab6-27e7badaee3d",
+					"id": "6bc01d3d-6c24-47e4-aab6-27e7badaee3d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -849,7 +849,7 @@
 				},
 				{
 					"name": "api/market/device",
-					"_postman_id": "0f50426d-b4b1-4b2a-aead-6118f3885e7d",
+					"id": "0f50426d-b4b1-4b2a-aead-6118f3885e7d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -877,7 +877,7 @@
 				},
 				{
 					"name": "api/market/device",
-					"_postman_id": "f7fc6c62-8c04-48cc-8774-82ed23855646",
+					"id": "f7fc6c62-8c04-48cc-8774-82ed23855646",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -905,7 +905,7 @@
 				},
 				{
 					"name": "api/market/device/{id}",
-					"_postman_id": "66ce2bd2-a9dc-471d-b1f4-26db1dfa0958",
+					"id": "66ce2bd2-a9dc-471d-b1f4-26db1dfa0958",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -923,14 +923,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "362aa033-06b3-4898-81ed-87518f6f516d"
+			"id": "362aa033-06b3-4898-81ed-87518f6f516d"
 		},
 		{
 			"name": "operator market users",
 			"item": [
 				{
 					"name": "api/operator/without_market_users/{id}",
-					"_postman_id": "17a58ecc-ed52-4c20-b556-e084a1bd3f50",
+					"id": "17a58ecc-ed52-4c20-b556-e084a1bd3f50",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -949,7 +949,7 @@
 				},
 				{
 					"name": "api/operator/market_roles_list",
-					"_postman_id": "2335ec18-ea1b-4b1e-a81a-92bd66afeee8",
+					"id": "2335ec18-ea1b-4b1e-a81a-92bd66afeee8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -968,7 +968,7 @@
 				},
 				{
 					"name": "api/operator/resller_tree/{id}",
-					"_postman_id": "27ac7541-abf9-403b-9533-c2b95435e7ef",
+					"id": "27ac7541-abf9-403b-9533-c2b95435e7ef",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -987,7 +987,7 @@
 				},
 				{
 					"name": "api/operator/without_market_users/list",
-					"_postman_id": "4eea3f48-d0ff-409a-8bb8-6a145e48617c",
+					"id": "4eea3f48-d0ff-409a-8bb8-6a145e48617c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1015,7 +1015,7 @@
 				},
 				{
 					"name": "api/operator/without_market_users",
-					"_postman_id": "147d75dd-dd4b-4326-b060-2ba67ad660bb",
+					"id": "147d75dd-dd4b-4326-b060-2ba67ad660bb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1043,7 +1043,7 @@
 				},
 				{
 					"name": "api/operator/without_market_users",
-					"_postman_id": "5c0ce670-cdfb-4735-901f-2ab1861539bd",
+					"id": "5c0ce670-cdfb-4735-901f-2ab1861539bd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1071,7 +1071,7 @@
 				},
 				{
 					"name": "api/operator/market_list",
-					"_postman_id": "28708855-b80a-4fe9-98bb-f03b6320fcf1",
+					"id": "28708855-b80a-4fe9-98bb-f03b6320fcf1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1089,14 +1089,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "c02df21e-f0ca-4809-a9c3-b04ef7a7ca79"
+			"id": "c02df21e-f0ca-4809-a9c3-b04ef7a7ca79"
 		},
 		{
 			"name": "market users",
 			"item": [
 				{
 					"name": "api/market/market_users/list",
-					"_postman_id": "77d46dd1-ffa5-45be-b021-83c03c3ecfaf",
+					"id": "77d46dd1-ffa5-45be-b021-83c03c3ecfaf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1124,7 +1124,7 @@
 				},
 				{
 					"name": "api/market/market_users/{id}",
-					"_postman_id": "9b75572b-f1bb-4a68-8700-6edbb52c0e94",
+					"id": "9b75572b-f1bb-4a68-8700-6edbb52c0e94",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1143,7 +1143,7 @@
 				},
 				{
 					"name": "api/market/roles_list",
-					"_postman_id": "ca189b3f-204c-48a4-860f-2cdc9ad5790a",
+					"id": "ca189b3f-204c-48a4-860f-2cdc9ad5790a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1162,7 +1162,7 @@
 				},
 				{
 					"name": "api/market/reseller/tree",
-					"_postman_id": "83f31a3e-db1e-4029-a091-fd8aa669079c",
+					"id": "83f31a3e-db1e-4029-a091-fd8aa669079c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1181,7 +1181,7 @@
 				},
 				{
 					"name": "api/market/market_users/send_create_sms",
-					"_postman_id": "62538a58-f575-431b-badb-e551f21e5a44",
+					"id": "62538a58-f575-431b-badb-e551f21e5a44",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1209,7 +1209,7 @@
 				},
 				{
 					"name": "api/market/market_users",
-					"_postman_id": "71ea6302-67cc-4023-9ff0-30e33be76afb",
+					"id": "71ea6302-67cc-4023-9ff0-30e33be76afb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1237,7 +1237,7 @@
 				},
 				{
 					"name": "api/market/market_users",
-					"_postman_id": "9a063e3f-4f53-4f2a-816f-be70aded6144",
+					"id": "9a063e3f-4f53-4f2a-816f-be70aded6144",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1264,14 +1264,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "4d6f798a-6750-4518-b5fb-f191d8f7ec64"
+			"id": "4d6f798a-6750-4518-b5fb-f191d8f7ec64"
 		},
 		{
 			"name": "manufacture_model",
 			"item": [
 				{
 					"name": "api/operator/manufacture_model/list",
-					"_postman_id": "0fe82096-b870-40d6-8995-5e05344beead",
+					"id": "0fe82096-b870-40d6-8995-5e05344beead",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1299,7 +1299,7 @@
 				},
 				{
 					"name": "api/operator/manufacture_model",
-					"_postman_id": "627a32b4-b3ac-4844-ba28-471a86ef64d2",
+					"id": "627a32b4-b3ac-4844-ba28-471a86ef64d2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1327,7 +1327,7 @@
 				},
 				{
 					"name": "api/operator/manufacture_model",
-					"_postman_id": "56806033-b1e2-49b7-8b39-093c2a75b106",
+					"id": "56806033-b1e2-49b7-8b39-093c2a75b106",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1355,7 +1355,7 @@
 				},
 				{
 					"name": "api/operator/manufacture_model/{id}",
-					"_postman_id": "7b24a39a-9b01-4f77-ba45-80b823ba7c56",
+					"id": "7b24a39a-9b01-4f77-ba45-80b823ba7c56",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1374,7 +1374,7 @@
 				},
 				{
 					"name": "api/operator/manufacture_model/{id}",
-					"_postman_id": "aa7212a3-20b4-4015-bcbb-555bf840a31d",
+					"id": "aa7212a3-20b4-4015-bcbb-555bf840a31d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1393,7 +1393,7 @@
 				},
 				{
 					"name": "api/operator/manufacture_model/image_download/k6OdXIKg،2FvZxaAJ،2FU3OsmA،3D،3D",
-					"_postman_id": "67c4e46d-b8a4-4ce5-be45-38661dae338b",
+					"id": "67c4e46d-b8a4-4ce5-be45-38661dae338b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1411,14 +1411,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "9a389d85-c8da-4d05-b187-553fc6ec478b"
+			"id": "9a389d85-c8da-4d05-b187-553fc6ec478b"
 		},
 		{
 			"name": "manufacture",
 			"item": [
 				{
 					"name": "api/operator/manufacture_model/list",
-					"_postman_id": "4918cc44-f595-4688-9940-6ac1d5aceef6",
+					"id": "4918cc44-f595-4688-9940-6ac1d5aceef6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1446,7 +1446,7 @@
 				},
 				{
 					"name": "api/operator/manufacture",
-					"_postman_id": "19935d5d-44de-4f52-bd13-f566788813c1",
+					"id": "19935d5d-44de-4f52-bd13-f566788813c1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1474,7 +1474,7 @@
 				},
 				{
 					"name": "api/operator/manufacture",
-					"_postman_id": "eb93d578-ff65-42b5-b81b-9ff1dda0c45b",
+					"id": "eb93d578-ff65-42b5-b81b-9ff1dda0c45b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1502,7 +1502,7 @@
 				},
 				{
 					"name": "api/operator/manufacture/{id}",
-					"_postman_id": "871453eb-9b7e-4123-8444-bfa1f4bc4db0",
+					"id": "871453eb-9b7e-4123-8444-bfa1f4bc4db0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1521,7 +1521,7 @@
 				},
 				{
 					"name": "api/operator/manufacture/{id}",
-					"_postman_id": "d42fba1b-6c7f-401b-aeaa-042870a23d96",
+					"id": "d42fba1b-6c7f-401b-aeaa-042870a23d96",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1539,14 +1539,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "4a54ada1-de21-41a8-90c6-0cd72ebb6b33"
+			"id": "4a54ada1-de21-41a8-90c6-0cd72ebb6b33"
 		},
 		{
 			"name": "app category",
 			"item": [
 				{
 					"name": "api/market/app_category/list",
-					"_postman_id": "7efa170a-56ad-4c31-94cb-50e6131b3624",
+					"id": "7efa170a-56ad-4c31-94cb-50e6131b3624",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1574,7 +1574,7 @@
 				},
 				{
 					"name": "api/market/app_category",
-					"_postman_id": "78697c4e-b60d-471d-9c11-25fb0d1a120a",
+					"id": "78697c4e-b60d-471d-9c11-25fb0d1a120a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1602,7 +1602,7 @@
 				},
 				{
 					"name": "api/market/app_category",
-					"_postman_id": "746ba5f3-2857-4f9e-b2cc-d09b252cb4be",
+					"id": "746ba5f3-2857-4f9e-b2cc-d09b252cb4be",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1630,7 +1630,7 @@
 				},
 				{
 					"name": "api/market/app_category/{id}",
-					"_postman_id": "2c54752f-8ca4-43c8-97a3-c25277964889",
+					"id": "2c54752f-8ca4-43c8-97a3-c25277964889",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1649,7 +1649,7 @@
 				},
 				{
 					"name": "api/market/app_category/{id}",
-					"_postman_id": "96bd8495-ecc9-460f-acef-a121952719cb",
+					"id": "96bd8495-ecc9-460f-acef-a121952719cb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1667,14 +1667,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "6a3aa482-c308-43d5-91c7-bbf44ad054a2"
+			"id": "6a3aa482-c308-43d5-91c7-bbf44ad054a2"
 		},
 		{
 			"name": "merchant",
 			"item": [
 				{
 					"name": "api/market/merchant/list",
-					"_postman_id": "98a87535-47e2-4cf0-ac27-15b35ef0a55a",
+					"id": "98a87535-47e2-4cf0-ac27-15b35ef0a55a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1702,7 +1702,7 @@
 				},
 				{
 					"name": "api/market/merchant",
-					"_postman_id": "1a590756-e530-49cb-a558-4882b98409a6",
+					"id": "1a590756-e530-49cb-a558-4882b98409a6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1730,7 +1730,7 @@
 				},
 				{
 					"name": "api/market/merchant",
-					"_postman_id": "e68c2fd9-4347-46bc-9a9d-3b0399026b4a",
+					"id": "e68c2fd9-4347-46bc-9a9d-3b0399026b4a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1758,7 +1758,7 @@
 				},
 				{
 					"name": "api/market/merchant/{id}",
-					"_postman_id": "8ba56abf-56dd-4953-9039-5a8bd88873bc",
+					"id": "8ba56abf-56dd-4953-9039-5a8bd88873bc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1777,7 +1777,7 @@
 				},
 				{
 					"name": "api/market/merchant/excel",
-					"_postman_id": "8969b703-971c-4430-8f46-9a224ef78888",
+					"id": "8969b703-971c-4430-8f46-9a224ef78888",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1805,7 +1805,7 @@
 				},
 				{
 					"name": "api/market/merchant/{id}",
-					"_postman_id": "7a48c848-0485-461c-b23f-d3b9d24195df",
+					"id": "7a48c848-0485-461c-b23f-d3b9d24195df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1823,14 +1823,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "7e853b48-0520-45c0-8bfa-f39991db5335"
+			"id": "7e853b48-0520-45c0-8bfa-f39991db5335"
 		},
 		{
 			"name": "group_device",
 			"item": [
 				{
 					"name": "/api/market/group/{id}/assign_devices",
-					"_postman_id": "f277202a-60e8-4450-804f-0de6ab1372d7",
+					"id": "f277202a-60e8-4450-804f-0de6ab1372d7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1858,7 +1858,7 @@
 				},
 				{
 					"name": "/api/market/group/{id}/assigned_devices/list",
-					"_postman_id": "1c46cc38-e32f-43af-962c-fc8a1e8a739a",
+					"id": "1c46cc38-e32f-43af-962c-fc8a1e8a739a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1886,7 +1886,7 @@
 				},
 				{
 					"name": "/api/market/group/{id}/not_assigned_devices/list",
-					"_postman_id": "b7462bc9-3d82-4772-a5e5-9855476e0bc0",
+					"id": "b7462bc9-3d82-4772-a5e5-9855476e0bc0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1913,14 +1913,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "45d5cd53-26dc-4c0b-8901-dd8e6d518435"
+			"id": "45d5cd53-26dc-4c0b-8901-dd8e6d518435"
 		},
 		{
 			"name": "device_group",
 			"item": [
 				{
 					"name": "/api/market/device/{id}/assign_groups",
-					"_postman_id": "e49a79b0-71b5-48b1-8f5c-595980195090",
+					"id": "e49a79b0-71b5-48b1-8f5c-595980195090",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1948,7 +1948,7 @@
 				},
 				{
 					"name": "/api/market/device/{id}/assigned_groups/list",
-					"_postman_id": "d73a8f9e-7623-41d7-b558-89fa5b693796",
+					"id": "d73a8f9e-7623-41d7-b558-89fa5b693796",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1976,7 +1976,7 @@
 				},
 				{
 					"name": "/api/market/device/{id}/not_assigned_groups/list",
-					"_postman_id": "ce6c0bf8-2ab1-4dc0-ad06-e752b4aa1d57",
+					"id": "ce6c0bf8-2ab1-4dc0-ad06-e752b4aa1d57",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2003,14 +2003,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "09b7a9fc-71d8-4f88-9ea3-0cb1c0448c6f"
+			"id": "09b7a9fc-71d8-4f88-9ea3-0cb1c0448c6f"
 		},
 		{
 			"name": "group",
 			"item": [
 				{
 					"name": "/api/market/group",
-					"_postman_id": "15d41ec2-5955-43f3-973d-eb129652d2f0",
+					"id": "15d41ec2-5955-43f3-973d-eb129652d2f0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2044,7 +2044,7 @@
 				},
 				{
 					"name": "api/market/group",
-					"_postman_id": "eb95a8bd-e32d-426e-bc61-82d9ac450e70",
+					"id": "eb95a8bd-e32d-426e-bc61-82d9ac450e70",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2078,7 +2078,7 @@
 				},
 				{
 					"name": "/api/market/group/list",
-					"_postman_id": "0541ee7d-5d7a-4c8b-9ee2-4e0fae8cee00",
+					"id": "0541ee7d-5d7a-4c8b-9ee2-4e0fae8cee00",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2112,7 +2112,7 @@
 				},
 				{
 					"name": "/api/market/group",
-					"_postman_id": "d5877b2e-260f-4125-91c1-278c5f72ef57",
+					"id": "d5877b2e-260f-4125-91c1-278c5f72ef57",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2137,7 +2137,7 @@
 				},
 				{
 					"name": "/api/market/group",
-					"_postman_id": "931b6bb4-42e9-4bbe-91b0-ae5fb85ad636",
+					"id": "931b6bb4-42e9-4bbe-91b0-ae5fb85ad636",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2170,7 +2170,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "bc0f7b5b-6869-4045-9181-6321f63cf33d",
+			"id": "bc0f7b5b-6869-4045-9181-6321f63cf33d",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2199,7 +2199,7 @@
 			"item": [
 				{
 					"name": "/api/market/app",
-					"_postman_id": "1ff6fb2b-0139-49bb-bda2-00ae764c0f3b",
+					"id": "1ff6fb2b-0139-49bb-bda2-00ae764c0f3b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2233,7 +2233,7 @@
 				},
 				{
 					"name": "/api/market/app/{id}/assign_manufacture_model",
-					"_postman_id": "5af83b48-68d5-4fba-8388-16b9356cd6df",
+					"id": "5af83b48-68d5-4fba-8388-16b9356cd6df",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2267,7 +2267,7 @@
 				},
 				{
 					"name": "/api/market/app/not_install_app/{id}",
-					"_postman_id": "a607b46a-1ff1-437a-a45c-8b5a7e55fb74",
+					"id": "a607b46a-1ff1-437a-a45c-8b5a7e55fb74",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2301,7 +2301,7 @@
 				},
 				{
 					"name": "api/market/app",
-					"_postman_id": "66dab08c-b313-4cfe-ac76-83e916c2099b",
+					"id": "66dab08c-b313-4cfe-ac76-83e916c2099b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2335,7 +2335,7 @@
 				},
 				{
 					"name": "/api/market/app/list",
-					"_postman_id": "07a19120-6435-4073-a229-f28dd9f53213",
+					"id": "07a19120-6435-4073-a229-f28dd9f53213",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2369,7 +2369,7 @@
 				},
 				{
 					"name": "/api/market/app",
-					"_postman_id": "b169a4e7-a549-4e32-9d7f-a0ed188a55d0",
+					"id": "b169a4e7-a549-4e32-9d7f-a0ed188a55d0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2394,7 +2394,7 @@
 				},
 				{
 					"name": "/api/market/app",
-					"_postman_id": "a5961f07-0470-433e-ab40-893883df4f4a",
+					"id": "a5961f07-0470-433e-ab40-893883df4f4a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2428,7 +2428,7 @@
 				},
 				{
 					"name": "/api/temp_upload",
-					"_postman_id": "c5b14232-f005-481f-9e28-0cee166e03d5",
+					"id": "c5b14232-f005-481f-9e28-0cee166e03d5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2449,10 +2449,7 @@
 									"type": "file",
 									"src": "/home/alitaban/Pictures/barnamenevis.jpg"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "{{tech_store_url}}/api/temp_upload"
 					},
@@ -2460,7 +2457,7 @@
 				},
 				{
 					"name": "api/market/app_category/list",
-					"_postman_id": "08e61f26-4dcb-4c43-949c-08e6c2120220",
+					"id": "08e61f26-4dcb-4c43-949c-08e6c2120220",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2487,7 +2484,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "0bbac588-6a65-4b98-b1ed-4fe1df38c649",
+			"id": "0bbac588-6a65-4b98-b1ed-4fe1df38c649",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2516,7 +2513,7 @@
 			"item": [
 				{
 					"name": "/api/market/app_apk",
-					"_postman_id": "0cc55c9c-03f9-4a1a-8cc7-59f7535a1b5b",
+					"id": "0cc55c9c-03f9-4a1a-8cc7-59f7535a1b5b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2550,7 +2547,7 @@
 				},
 				{
 					"name": "api/market/app_apk",
-					"_postman_id": "f8ce7238-6bda-4242-bd8d-a7836cf10d6c",
+					"id": "f8ce7238-6bda-4242-bd8d-a7836cf10d6c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2584,7 +2581,7 @@
 				},
 				{
 					"name": "/api/market/app_apk/change_status",
-					"_postman_id": "cdf79c00-e67d-4e90-9efb-75a697d25d0f",
+					"id": "cdf79c00-e67d-4e90-9efb-75a697d25d0f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2618,7 +2615,7 @@
 				},
 				{
 					"name": "/api/market/app/{id}/app_apk/list",
-					"_postman_id": "b0d2185b-5c87-49b7-a0e5-98243e16a5bc",
+					"id": "b0d2185b-5c87-49b7-a0e5-98243e16a5bc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2652,7 +2649,7 @@
 				},
 				{
 					"name": "/api/market/app_apk",
-					"_postman_id": "3704146b-8790-491a-bd47-1688e31a229a",
+					"id": "3704146b-8790-491a-bd47-1688e31a229a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2677,7 +2674,7 @@
 				},
 				{
 					"name": "/api/market/app_apk/{id}/download",
-					"_postman_id": "4701c232-0e52-4a2c-9b46-fce63e33d9c7",
+					"id": "4701c232-0e52-4a2c-9b46-fce63e33d9c7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2702,7 +2699,7 @@
 				},
 				{
 					"name": "/api/temp_upload",
-					"_postman_id": "9cd552b4-07ae-406d-9f0f-af406eaac3bc",
+					"id": "9cd552b4-07ae-406d-9f0f-af406eaac3bc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2723,17 +2720,14 @@
 									"type": "file",
 									"src": "/C:/Users/a.ghazi/Pictures/The_Blue_Marble_(remastered).jpg"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "{{tech_store_url}}/api/temp_upload"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "42df9528-389b-4e9c-b144-9b0afd66a3e8",
+			"id": "42df9528-389b-4e9c-b144-9b0afd66a3e8",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2762,7 +2756,7 @@
 			"item": [
 				{
 					"name": "/api/operator/firmware",
-					"_postman_id": "67610911-419a-4a35-bdeb-1cb4d21d9e9e",
+					"id": "67610911-419a-4a35-bdeb-1cb4d21d9e9e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2796,7 +2790,7 @@
 				},
 				{
 					"name": "/api/operator/firmware",
-					"_postman_id": "105eb1c7-d762-40ed-be7c-868fc5d2d394",
+					"id": "105eb1c7-d762-40ed-be7c-868fc5d2d394",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2830,7 +2824,7 @@
 				},
 				{
 					"name": "/api/operator/app/{id}/firmware/list",
-					"_postman_id": "52ff6eb9-9e17-4925-a6ad-b6c82e9030de",
+					"id": "52ff6eb9-9e17-4925-a6ad-b6c82e9030de",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2864,7 +2858,7 @@
 				},
 				{
 					"name": "/api/operator/firmware",
-					"_postman_id": "bbb110a5-a93d-4a2f-a016-c66aad9119c0",
+					"id": "bbb110a5-a93d-4a2f-a016-c66aad9119c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2889,7 +2883,7 @@
 				},
 				{
 					"name": "/api/operator/firmware/{id}/download",
-					"_postman_id": "971eb1b2-a648-4699-89ac-f5b0afa9af12",
+					"id": "971eb1b2-a648-4699-89ac-f5b0afa9af12",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2914,7 +2908,7 @@
 				},
 				{
 					"name": "/api/temp_upload",
-					"_postman_id": "f5a1474f-82ff-49d9-912e-632204a2aec4",
+					"id": "f5a1474f-82ff-49d9-912e-632204a2aec4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2935,17 +2929,14 @@
 									"type": "file",
 									"src": "/C:/Users/a.ghazi/Pictures/The_Blue_Marble_(remastered).jpg"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "{{tech_store_url}}/api/temp_upload"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "5397d257-701e-47e5-a6bb-c46498adbfa2",
+			"id": "5397d257-701e-47e5-a6bb-c46498adbfa2",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -2974,7 +2965,7 @@
 			"item": [
 				{
 					"name": "/api/market/dashboard/top10AppDownload",
-					"_postman_id": "73984026-a32a-4e71-bec1-6e3d88e89a5d",
+					"id": "73984026-a32a-4e71-bec1-6e3d88e89a5d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3008,7 +2999,7 @@
 				},
 				{
 					"name": "/api/market/dashboard/numberOfTerminalsByReseller",
-					"_postman_id": "e5abe30b-8710-4844-b754-376c36aea461",
+					"id": "e5abe30b-8710-4844-b754-376c36aea461",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3042,7 +3033,7 @@
 				},
 				{
 					"name": "/api/market/dashboard/top10Merchant",
-					"_postman_id": "85ee9aaa-6ac7-452c-b4ac-9717f67e2ca5",
+					"id": "85ee9aaa-6ac7-452c-b4ac-9717f67e2ca5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3076,7 +3067,7 @@
 				},
 				{
 					"name": "/api/market/dashboard/numberOfTerminalsByModel",
-					"_postman_id": "587591e3-1dde-4efa-8165-7c052b72065f",
+					"id": "587591e3-1dde-4efa-8165-7c052b72065f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3110,7 +3101,7 @@
 				},
 				{
 					"name": "/api/market/dashboard/count_child_level_one_according_to_device",
-					"_postman_id": "eccc5844-f7a1-4a57-8fc1-7a120f2f94b2",
+					"id": "eccc5844-f7a1-4a57-8fc1-7a120f2f94b2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3135,7 +3126,7 @@
 				},
 				{
 					"name": "/api/market/dashboard/device_count",
-					"_postman_id": "88d4f8e7-84bd-41dd-9700-6148a9b0474b",
+					"id": "88d4f8e7-84bd-41dd-9700-6148a9b0474b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3153,7 +3144,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "9a4f8534-38da-4656-aaf9-f4834e0c1b5b",
+			"id": "9a4f8534-38da-4656-aaf9-f4834e0c1b5b",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -3182,7 +3173,7 @@
 			"item": [
 				{
 					"name": "/api/market/app_file",
-					"_postman_id": "da690297-e4b4-4eff-8348-d6ec4940109f",
+					"id": "da690297-e4b4-4eff-8348-d6ec4940109f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3216,7 +3207,7 @@
 				},
 				{
 					"name": "api/market/app_file",
-					"_postman_id": "b64bdc55-c78c-4303-9e9d-86ccd97e1355",
+					"id": "b64bdc55-c78c-4303-9e9d-86ccd97e1355",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3250,7 +3241,7 @@
 				},
 				{
 					"name": "/api/market/app/{id}/app_file/list",
-					"_postman_id": "74851d35-ea6e-4743-beca-871b204c3338",
+					"id": "74851d35-ea6e-4743-beca-871b204c3338",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3284,7 +3275,7 @@
 				},
 				{
 					"name": "/api/market/app_file",
-					"_postman_id": "cc800a2d-c04f-4cd1-853a-6312a79d6556",
+					"id": "cc800a2d-c04f-4cd1-853a-6312a79d6556",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3309,7 +3300,7 @@
 				},
 				{
 					"name": "/api/market/app_file/{id}/download",
-					"_postman_id": "ecd669b5-7d9a-4bcd-b1d5-deaa2ddc5a29",
+					"id": "ecd669b5-7d9a-4bcd-b1d5-deaa2ddc5a29",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3334,7 +3325,7 @@
 				},
 				{
 					"name": "/api/temp_upload",
-					"_postman_id": "3883f699-bc12-4943-bf5d-558aefea1a3c",
+					"id": "3883f699-bc12-4943-bf5d-558aefea1a3c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3355,17 +3346,14 @@
 									"type": "file",
 									"src": "/home/alitaban/Pictures/17640.jpg"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "{{tech_store_url}}/api/temp_upload"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "3a485ada-8ca6-4994-bb44-4c9b27c67cf8",
+			"id": "3a485ada-8ca6-4994-bb44-4c9b27c67cf8",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -3394,7 +3382,7 @@
 			"item": [
 				{
 					"name": "api/operator/market",
-					"_postman_id": "247dfb12-f6ad-4452-a77a-fdc528201ed0",
+					"id": "247dfb12-f6ad-4452-a77a-fdc528201ed0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3428,7 +3416,7 @@
 				},
 				{
 					"name": "api/operator/market/{id}",
-					"_postman_id": "d6fb3d93-3bf5-4736-b224-10a05db762ad",
+					"id": "d6fb3d93-3bf5-4736-b224-10a05db762ad",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3462,7 +3450,7 @@
 				},
 				{
 					"name": "api/operator/market/list",
-					"_postman_id": "2194827c-a514-4320-8209-416f8703272e",
+					"id": "2194827c-a514-4320-8209-416f8703272e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3496,7 +3484,7 @@
 				},
 				{
 					"name": "api/operator/market/{id}",
-					"_postman_id": "7597bde4-74fe-4348-ade9-05d0500c4bfe",
+					"id": "7597bde4-74fe-4348-ade9-05d0500c4bfe",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3521,7 +3509,7 @@
 				},
 				{
 					"name": "api/operator/market",
-					"_postman_id": "f5b1c40f-f907-4d7d-bbb2-6ad5f039c22b",
+					"id": "f5b1c40f-f907-4d7d-bbb2-6ad5f039c22b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3554,7 +3542,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "793fbb3d-985c-4155-a63e-1a2c6cd455b0",
+			"id": "793fbb3d-985c-4155-a63e-1a2c6cd455b0",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -3583,7 +3571,7 @@
 			"item": [
 				{
 					"name": "api/market/common/manufacture_model/{id}",
-					"_postman_id": "8802da0a-6aba-40f5-b315-763562f29598",
+					"id": "8802da0a-6aba-40f5-b315-763562f29598",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3608,7 +3596,7 @@
 				},
 				{
 					"name": "api/market/common/manufacture_model/filter/{name}",
-					"_postman_id": "554f9502-cf7d-4725-ac4b-c9ac0cc4e3f9",
+					"id": "554f9502-cf7d-4725-ac4b-c9ac0cc4e3f9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3633,7 +3621,7 @@
 				},
 				{
 					"name": "api/market/common/manufacture",
-					"_postman_id": "7f60f9da-bd7d-4f7f-9ba6-51170b145d71",
+					"id": "7f60f9da-bd7d-4f7f-9ba6-51170b145d71",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3657,14 +3645,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "37751396-cc29-40be-a1b6-3cd64c237284"
+			"id": "37751396-cc29-40be-a1b6-3cd64c237284"
 		},
 		{
 			"name": "reseller",
 			"item": [
 				{
 					"name": "/api/market/reseller",
-					"_postman_id": "58245892-d013-4ef4-89c1-78af2cfa6857",
+					"id": "58245892-d013-4ef4-89c1-78af2cfa6857",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3698,7 +3686,7 @@
 				},
 				{
 					"name": "/api/market/reseller/tree/move",
-					"_postman_id": "aa0a36d8-d117-4ce4-af5f-693a730a8ab0",
+					"id": "aa0a36d8-d117-4ce4-af5f-693a730a8ab0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3732,7 +3720,7 @@
 				},
 				{
 					"name": "api/market/reseller",
-					"_postman_id": "5a3b8a8c-e9db-44e9-b5e6-ea75e249f318",
+					"id": "5a3b8a8c-e9db-44e9-b5e6-ea75e249f318",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3766,7 +3754,7 @@
 				},
 				{
 					"name": "/api/market/reseller",
-					"_postman_id": "e54877f1-4c54-4705-bdff-67638edf18d2",
+					"id": "e54877f1-4c54-4705-bdff-67638edf18d2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3791,7 +3779,7 @@
 				},
 				{
 					"name": "/api/market/reseller",
-					"_postman_id": "bbfa9d2c-b028-4386-a1d1-cdc10c00c959",
+					"id": "bbfa9d2c-b028-4386-a1d1-cdc10c00c959",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3825,7 +3813,7 @@
 				},
 				{
 					"name": "/api/market/reseller/tree",
-					"_postman_id": "71fba5b3-28e0-46ad-a279-aab358e8e39b",
+					"id": "71fba5b3-28e0-46ad-a279-aab358e8e39b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3850,7 +3838,7 @@
 				},
 				{
 					"name": "/api/market/reseller/tree",
-					"_postman_id": "c46d2061-7b3b-405c-a013-76c122aed4c6",
+					"id": "c46d2061-7b3b-405c-a013-76c122aed4c6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3883,7 +3871,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "f818795a-fdf4-4287-8f8e-d56659c664e4",
+			"id": "f818795a-fdf4-4287-8f8e-d56659c664e4",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -3912,7 +3900,7 @@
 			"item": [
 				{
 					"name": "/api/operator/firmware/{id}/assign_markets",
-					"_postman_id": "e6b3adf5-e39e-47f3-91bd-91feb6083516",
+					"id": "e6b3adf5-e39e-47f3-91bd-91feb6083516",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3940,7 +3928,7 @@
 				},
 				{
 					"name": "/api/operator/firmware/{id}/assigned_markets/list",
-					"_postman_id": "ac796810-ab2c-4b47-b9b1-86320c8b28f5",
+					"id": "ac796810-ab2c-4b47-b9b1-86320c8b28f5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3968,7 +3956,7 @@
 				},
 				{
 					"name": "/api/operator/firmware/{id}/not_assigned_markets/list",
-					"_postman_id": "2236a459-0f03-4ae3-b9e3-3bbe536888b8",
+					"id": "2236a459-0f03-4ae3-b9e3-3bbe536888b8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -3995,14 +3983,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "38f6d1b2-ec1f-40da-b599-fe6f2d2a98a6"
+			"id": "38f6d1b2-ec1f-40da-b599-fe6f2d2a98a6"
 		},
 		{
 			"name": "market firmware",
 			"item": [
 				{
 					"name": "/api/market/firmware/list",
-					"_postman_id": "69ab19d1-e275-4dee-a6c5-6cdd3926385a",
+					"id": "69ab19d1-e275-4dee-a6c5-6cdd3926385a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4030,7 +4018,7 @@
 				},
 				{
 					"name": "/api/market/device/{id}/firmware/list",
-					"_postman_id": "1ba0e6b0-a216-4f1b-960f-94f3768f3690",
+					"id": "1ba0e6b0-a216-4f1b-960f-94f3768f3690",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4057,14 +4045,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "2c6a10f1-1096-4c3b-ae81-de8e7b21121e"
+			"id": "2c6a10f1-1096-4c3b-ae81-de8e7b21121e"
 		},
 		{
 			"name": "async_task",
 			"item": [
 				{
 					"name": "/api/market/async_task for merchants",
-					"_postman_id": "4c417d97-ae6a-49c4-8eda-489d9e680d69",
+					"id": "4c417d97-ae6a-49c4-8eda-489d9e680d69",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4092,7 +4080,7 @@
 				},
 				{
 					"name": "/api/market/async_task for devices",
-					"_postman_id": "15ef15f2-6dca-4bd1-a523-307d708a2a1e",
+					"id": "15ef15f2-6dca-4bd1-a523-307d708a2a1e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4120,7 +4108,7 @@
 				},
 				{
 					"name": "/api/market/async_task/list",
-					"_postman_id": "df7c8201-97cd-4293-807b-f2bb80a8878a",
+					"id": "df7c8201-97cd-4293-807b-f2bb80a8878a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4148,7 +4136,7 @@
 				},
 				{
 					"name": "/api/market/async_task_file/download/*",
-					"_postman_id": "c87f00da-675c-440f-aaeb-de650f31210b",
+					"id": "c87f00da-675c-440f-aaeb-de650f31210b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4176,7 +4164,7 @@
 				},
 				{
 					"name": "/api/market/async_task",
-					"_postman_id": "99321416-89a7-4dd4-a991-d7ec6713693e",
+					"id": "99321416-89a7-4dd4-a991-d7ec6713693e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4204,7 +4192,7 @@
 				},
 				{
 					"name": "/api/temp_upload",
-					"_postman_id": "a097cc1d-3ae3-46f6-978c-f9efd594d4c1",
+					"id": "a097cc1d-3ae3-46f6-978c-f9efd594d4c1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4225,24 +4213,21 @@
 									"type": "file",
 									"src": "/home/alitaban/Documents/devices-template.xlsx"
 								}
-							],
-							"options": {
-								"formdata": {}
-							}
+							]
 						},
 						"url": "{{tech_store_url}}/api/temp_upload"
 					},
 					"response": []
 				}
 			],
-			"_postman_id": "4889356c-023f-4e19-92ed-6a8af63b8d69"
+			"id": "4889356c-023f-4e19-92ed-6a8af63b8d69"
 		},
 		{
 			"name": "administration",
 			"item": [
 				{
 					"name": "/api/administration/setting/reload",
-					"_postman_id": "fbbca85d-49e2-4bf7-ae19-aceee1ab93c2",
+					"id": "fbbca85d-49e2-4bf7-ae19-aceee1ab93c2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4269,7 +4254,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "30b99cbd-98fe-40b1-b8d5-2661bb76978a",
+			"id": "30b99cbd-98fe-40b1-b8d5-2661bb76978a",
 			"auth": {
 				"type": "bearer",
 				"bearer": {
@@ -4304,7 +4289,7 @@
 			"item": [
 				{
 					"name": "api/operator/reseller_tree/{marketId}",
-					"_postman_id": "dbe3e633-ed18-47dc-bf7d-d5c0e4035379",
+					"id": "dbe3e633-ed18-47dc-bf7d-d5c0e4035379",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4338,7 +4323,7 @@
 				},
 				{
 					"name": "api/operator/merchant/list/{resellerId}",
-					"_postman_id": "471cc1d9-e4eb-4af8-ace8-96cfef495c05",
+					"id": "471cc1d9-e4eb-4af8-ace8-96cfef495c05",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4366,7 +4351,7 @@
 				},
 				{
 					"name": "api/operator/device/list",
-					"_postman_id": "6a6eebd9-2eb2-4282-80f2-0a8b10b66778",
+					"id": "6a6eebd9-2eb2-4282-80f2-0a8b10b66778",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4400,7 +4385,7 @@
 				},
 				{
 					"name": "api/operator/device",
-					"_postman_id": "d7205f95-308d-42b5-bff0-5279f6dc6f18",
+					"id": "d7205f95-308d-42b5-bff0-5279f6dc6f18",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4434,7 +4419,7 @@
 				},
 				{
 					"name": "api/operator/device/{id}",
-					"_postman_id": "7d1e2118-73f5-4907-982a-27679e71ad83",
+					"id": "7d1e2118-73f5-4907-982a-27679e71ad83",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4462,7 +4447,7 @@
 				},
 				{
 					"name": "/api/operator/market_list",
-					"_postman_id": "98cc4945-5397-4d9b-82fb-393178157583",
+					"id": "98cc4945-5397-4d9b-82fb-393178157583",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -4489,7 +4474,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "33495432-9ad0-4ce4-a776-f6616365301e"
+			"id": "33495432-9ad0-4ce4-a776-f6616365301e"
 		},
 		{
 			"name": "bulk_command",
@@ -4499,7 +4484,7 @@
 					"item": [
 						{
 							"name": "api/operator/bulkCommand/bulk_update",
-							"_postman_id": "bbcd6565-0ca4-428b-ab28-7f24894c5769",
+							"id": "bbcd6565-0ca4-428b-ab28-7f24894c5769",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4524,7 +4509,7 @@
 						},
 						{
 							"name": "api/operator/bulkCommand/bulk_cancel_All",
-							"_postman_id": "e5466176-71d2-4bf6-8db8-d962d6a6165c",
+							"id": "e5466176-71d2-4bf6-8db8-d962d6a6165c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4549,7 +4534,7 @@
 						},
 						{
 							"name": "api/operator/bulkCommand/list",
-							"_postman_id": "4f02bac5-8f2d-42a5-8a2e-847f330ad2a2",
+							"id": "4f02bac5-8f2d-42a5-8a2e-847f330ad2a2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4582,15 +4567,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "be6c3ff0-d83d-4ff7-b071-4241ab75fb46",
-					"_postman_isSubFolder": true
+					"id": "be6c3ff0-d83d-4ff7-b071-4241ab75fb46"
 				},
 				{
 					"name": "market",
 					"item": [
 						{
 							"name": "api/market/bulkCommand/list",
-							"_postman_id": "c31e294f-a1ce-4d72-b8cf-582ebf89a18a",
+							"id": "c31e294f-a1ce-4d72-b8cf-582ebf89a18a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4624,7 +4608,7 @@
 						},
 						{
 							"name": "api/market/bulkCommand/bulk_update",
-							"_postman_id": "5bf0be2e-5ae9-43e8-9298-aef66e464252",
+							"id": "5bf0be2e-5ae9-43e8-9298-aef66e464252",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4658,7 +4642,7 @@
 						},
 						{
 							"name": "api/market/bulkCommand/bulk_cancel_All",
-							"_postman_id": "5c74a5a8-e6c8-467d-ab76-db4960fd23f6",
+							"id": "5c74a5a8-e6c8-467d-ab76-db4960fd23f6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4691,11 +4675,10 @@
 							"response": []
 						}
 					],
-					"_postman_id": "1c7997c1-dae1-4549-b29b-445da3fe456d",
-					"_postman_isSubFolder": true
+					"id": "1c7997c1-dae1-4549-b29b-445da3fe456d"
 				}
 			],
-			"_postman_id": "b98cf5cf-590b-4ce5-9185-5ef3653ddc13"
+			"id": "b98cf5cf-590b-4ce5-9185-5ef3653ddc13"
 		},
 		{
 			"name": "workflow",
@@ -4705,7 +4688,7 @@
 					"item": [
 						{
 							"name": "/api/market/app_apk_workflow/list",
-							"_postman_id": "d9c4f1a4-648d-4264-ac01-477a98a49e92",
+							"id": "d9c4f1a4-648d-4264-ac01-477a98a49e92",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4733,7 +4716,7 @@
 						},
 						{
 							"name": "/api/market/app_apk_workflow/{id}/app_apk",
-							"_postman_id": "66699b65-032b-4d87-b0e1-91a1e9145487",
+							"id": "66699b65-032b-4d87-b0e1-91a1e9145487",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4761,7 +4744,7 @@
 						},
 						{
 							"name": "/api/market/app_apk_workflow/change_status",
-							"_postman_id": "e779fdab-0dfe-4c3a-abab-0a59a796768a",
+							"id": "e779fdab-0dfe-4c3a-abab-0a59a796768a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4788,15 +4771,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "adde2294-301d-449a-a899-db43056fcca4",
-					"_postman_isSubFolder": true
+					"id": "adde2294-301d-449a-a899-db43056fcca4"
 				},
 				{
 					"name": "definitions",
 					"item": [
 						{
 							"name": "/api/market/work_flow_definitions",
-							"_postman_id": "9a09fea4-ce57-4de0-b1f4-f787735a953c",
+							"id": "9a09fea4-ce57-4de0-b1f4-f787735a953c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4815,7 +4797,7 @@
 						},
 						{
 							"name": "/api/market/work_flow_definitions",
-							"_postman_id": "759a3a6f-38d4-4acf-9f12-8a019d177c4a",
+							"id": "759a3a6f-38d4-4acf-9f12-8a019d177c4a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4843,7 +4825,7 @@
 						},
 						{
 							"name": "/api/market/work_flow_definitions/move",
-							"_postman_id": "4cacd320-f9fb-4d1d-92ba-9b3dae3b3c5e",
+							"id": "4cacd320-f9fb-4d1d-92ba-9b3dae3b3c5e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4871,7 +4853,7 @@
 						},
 						{
 							"name": "/api/market/work_flow_definitions/{id}",
-							"_postman_id": "be8f7306-65e0-48fd-8978-4d02beb6d3bd",
+							"id": "be8f7306-65e0-48fd-8978-4d02beb6d3bd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4890,7 +4872,7 @@
 						},
 						{
 							"name": "/api/market/work_flow_definitions/roles_list",
-							"_postman_id": "2e810624-5d2f-4e48-90c9-8dfc61136781",
+							"id": "2e810624-5d2f-4e48-90c9-8dfc61136781",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4909,7 +4891,7 @@
 						},
 						{
 							"name": "/api/market/work_flow_definitions/market_users/list",
-							"_postman_id": "c5e39431-3feb-46c1-95f9-30978e9dc35f",
+							"id": "c5e39431-3feb-46c1-95f9-30978e9dc35f",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4936,11 +4918,10 @@
 							"response": []
 						}
 					],
-					"_postman_id": "118f4d26-5815-466a-8683-226e626481b0",
-					"_postman_isSubFolder": true
+					"id": "118f4d26-5815-466a-8683-226e626481b0"
 				}
 			],
-			"_postman_id": "9cb44596-f36b-45a4-b548-41620ab93a05"
+			"id": "9cb44596-f36b-45a4-b548-41620ab93a05"
 		}
 	]
 }
